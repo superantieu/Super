@@ -1,0 +1,496 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Super</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+   @* <link rel="stylesheet" href="~/Super.styles.css" asp-append-version="true" />*@
+   @* <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>*@
+  @*  <link href="~/asset/css/resetcss.css" rel="stylesheet" />*@
+    <link href="~/asset/css/reset.css" rel="stylesheet" />
+    <link href="~/asset/css/grid.css" rel="stylesheet" />
+    <link href="~/asset/css/base.css" rel="stylesheet" />
+    <link href="~/asset/css/main.css" rel="stylesheet" />
+    <link href="~/asset/css/responsive.css" rel="stylesheet" />
+    <link href="~/asset/fonts/fontawesome/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" sizes="192x192" href="~/asset/image/icons/icon-192x192.png">
+    <link rel="icon" sizes="96x96" href="~/asset/image/icons/icon-96x96.png">
+    <link rel="icon" sizes="32x32" href="~/asset/image/icons/icon-32x32.png">
+    <link rel="icon" sizes="16x16" href="~/asset/image/icons/icon-16x16.png">
+</head>
+<body>
+  @*  <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Super</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                       
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>*@
+
+    <header class="header">
+            <div class="grid wide header-container">
+                <nav class="navbar hide-on-mobile-tablet">
+                    <div class="navbar-container">
+                        <ul class="navbar-container__links">
+                            <li><a href="" class="navbar-items navbar-items--hover navbar-items__separate">Kênh Người Bán</a></li>
+                           <li><a href="" class="navbar-items navbar-items--hover navbar-items__separate">Trở thành Người bán Super</a></li>
+                            
+                            <li href="" class="navbar-items navbar-items--hover navbar-qr-show navbar-items__separate">
+                                Tải ứng dụng
+                                <div class="navbar-items__qr-code">
+                                    <img class="navbar-qrcode-icon" src="./asset/image/qr_code.png" alt="QR Code">
+                                    <div class="navbar-app-container">
+                                        <a class="navbar-app" href="">
+                                            <img class="navbar-app-icon" src="./asset/image/app_store-icon.png" alt="App Store Icon">
+                                        </a>
+                                        <a class="navbar-app" href="">
+                                            <img class="navbar-app-icon" src="./asset/image/google_play-icon.png" alt="Google Play Icon">
+                                        </a>
+                                        <a class="navbar-app" href="">
+                                            <img class="navbar-app-icon" src="./asset/image/app_gallery-icon.png" alt="App Gallery Icon">
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="navbar-items">
+                                Kết nối
+                                <a class="navbar-items__link" href=""><i class="navbar-icons fab fa-facebook"></i></a>
+                                <a class="navbar-items__link" href=""><i class="navbar-icons fab fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-container__links">
+                            <li class="navbar-items navbar-items--hover">
+                                <div class="navbar-items__link" href="">
+                                    <i class="navbar-icons far fa-bell"></i>
+                                    Thông báo
+                                </div>
+                                <div class="navbar-notify">
+                                    <!-- <div class="navbar-notify-unsign">
+                                        <div class="notify-header">
+                                            <img src="./asset/image/notify-icon.png" alt="" class="notify-icon">
+                                            <p style="color: var(--text-color); text-align: center;">Đăng nhập để xem thông báo</p>
+                                        </div>
+                                        <div class="notify-button-container">
+                                            <a class="notify-button">Đăng ký</a>
+                                            <a class="notify-button">Đăng nhập</a>
+                                        </div>
+                                    </div> -->
+                                    <div class="navbar-notify-signed">
+                                        <div class="notify-heading">Thông Báo Mới Nhận</div>
+                                        <ul class="notify-container">
+                                            <li class="notify-item">
+                                                <div class="notify-item-container">
+                                                    <div class="notify-item__icon" style="background-image: url(./asset/image/notify-item1.jpg);"></div>
+                                                    <div class="notify-item-infor">
+                                                        <span class="notify-item-infor__heading">Đồ dùng siêu sale chỉ từ 7K</span>
+                                                        <span class="notify-item-infor__description">💕 Săn thêm voucher đến 100K
+                                                            ️🎉 Top thương hiệu giảm đến 50%
+                                                            ️🛒 Mua 1 tặng 1 - Ngại gì không mua!</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="notify-item notify-item--highlight">
+                                                <div class="notify-item-container">
+                                                    <div class="notify-item__icon" style="background-image: url(./asset/image/notify-item2.png);"></div>
+                                                    <div class="notify-item-infor">
+                                                        <span class="notify-item-infor__heading">Siêu thị 0Đ - Freeship đến 70K</span>
+                                                        <span class="notify-item-infor__description">🛵 Now Fresh giờ nào cũng ship
+                                                            💕 Loạt deal 0Đ cực hot
+                                                            💥 Đi chợ cùng Copyyy Mart thôi!</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="notify-item">
+                                                <div class="notify-item-container">
+                                                    <div class="notify-item__icon" style="background-image: url(./asset/image/notify-item3.png);"></div>
+                                                    <div class="notify-item-infor">
+                                                        <span class="notify-item-infor__heading">Cuối tuần rồi, Super thôi.</span>
+                                                        <span class="notify-item-infor__description">Ở nhà không khó.
+                                                            Super tặng bạn voucher cho đơn từ 50K.
+                                                            Số lượng có hạn. Kiểm tra ví và mua ngay!!!</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="notify-item">
+                                                <div class="notify-item-container">
+                                                    <div class="notify-item__icon" style="background-image: url(./asset/image/notify-item4.png);"></div>
+                                                    <div class="notify-item-infor">
+                                                        <span class="notify-item-infor__heading">Voucher Hoàn Xu Xtra 20% tối đa 40K Xu cho đơn từ 0Đ.</span>
+                                                        <span class="notify-item-infor__description">Voucher Hoàn Xu Xtra hoàn 20% tối đa 40K Xu đã có sẵn trong ví voucher. Hiệu lực: 26/07/2022 00:00 - 26/07/2023 23:59. Số lượng có hạn. Dùng ngay bạn nhé!</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="notify-item notify-item--highlight">
+                                                <div class="notify-item-container">
+                                                    <div class="notify-item__icon" style="background-image: url(./asset/image/notify-item5.jpg);"></div>
+                                                    <div class="notify-item-infor">
+                                                        <span class="notify-item-infor__heading">Siêu sale Shop Mới giảm 50%</span>
+                                                        <span class="notify-item-infor__description">✨ Tiêu dùng, Điện tử, Thời trang
+                                                            😍 Nhiều deal sale sốc đến 50%
+                                                            🍂 Săn thêm voucher giảm 10%
+                                                            💥 Ở nhà không khó, an tâm mua sắm!</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="notify-footing">
+                                            <a href="" class="notify-footing__btn">
+                                                Xem tất cả
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="navbar-items navbar-items--hover">
+                                <a class="navbar-items__link" href=""><i class="navbar-icons far fa-question-circle"></i>Hỗ trợ</a>
+                            </li>
+                            <!-- <li class="navbar-items navbar-items--hover">
+                                <a class="navbar-items__link navbar-items__link--textbold navbar-items__separate" href="">Đăng ký</a>
+                            </li>
+                            <li class="navbar-items navbar-items--hover">
+                                <a class="navbar-items__link navbar-items__link--textbold" href="">Đăng nhập</a>
+                            </li> -->
+                            <li class="navbar-items navbar-user">
+                                @*<img <img src="~/asset/image/user-icon.png" alt="" class="navbar-user__img">*@
+                                <img src="~/asset/image/user_icon_s.png" alt="" class="navbar-user__img"/>
+                                <span class="navbar-user__name">Super</span>
+                                <ul class="navbar-user__menu">
+                                    <li class="user-menu__item">
+                                        <a href="" class="user-menu__item-link">Tài khoản của tôi</a>
+                                    </li>
+                                    <li class="user-menu__item">
+                                        <a href="" class="user-menu__item-link">Đơn mua</a>
+                                    </li>
+                                    <li class="user-menu__item">
+                                        <a href="" class="user-menu__item-link">Đăng xuất</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="header-search">
+                    <div class="search-container">
+                        <label for="mobile-search-check" class="header__mobile-search">
+                            <i class="fas fa-search header__mobile-search-icon"></i>
+                        </label>
+
+                        <input type="checkbox" class="header-mobile-search__input" hidden id="mobile-search-check">
+
+                        <a href="/" class="search-container__logo hide-on-mobile-tablet">
+
+                            <svg width="160px" height="50px" viewBox="0 0 552 189" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M85.3125 40.7557C84.5549 34.0322 81.4299 28.8239 75.9375 25.1307C70.4451 21.3902 63.5322 19.5199 55.1989 19.5199C49.233 19.5199 44.072 20.4669 39.7159 22.3608C35.3598 24.2074 31.9744 26.7642 29.5597 30.0312C27.1922 33.2509 26.0085 36.9205 26.0085 41.0398C26.0085 44.4962 26.8134 47.4792 28.4233 49.9886C30.0805 52.4981 32.2349 54.6051 34.8864 56.3097C37.5852 57.9669 40.4735 59.3636 43.5511 60.5C46.6288 61.589 49.5881 62.4886 52.429 63.1989L66.6335 66.892C71.2737 68.0284 76.0322 69.5672 80.9091 71.5085C85.786 73.4498 90.3078 76.0066 94.4744 79.179C98.6411 82.3513 102.003 86.2812 104.56 90.9688C107.164 95.6562 108.466 101.267 108.466 107.801C108.466 116.04 106.335 123.355 102.074 129.747C97.8599 136.139 91.7282 141.182 83.679 144.875C75.6771 148.568 65.9943 150.415 54.6307 150.415C43.7405 150.415 34.3182 148.687 26.3636 145.23C18.4091 141.774 12.1828 136.873 7.68466 130.528C3.18655 124.136 0.700758 116.561 0.227273 107.801H22.2443C22.6705 113.057 24.375 117.437 27.358 120.94C30.3883 124.397 34.2472 126.977 38.9347 128.682C43.6695 130.339 48.8542 131.168 54.4886 131.168C60.6913 131.168 66.2074 130.197 71.0369 128.256C75.9138 126.267 79.7491 123.521 82.5426 120.017C85.3362 116.466 86.733 112.323 86.733 107.588C86.733 103.279 85.5019 99.7519 83.0398 97.0057C80.625 94.2595 77.3343 91.9867 73.1676 90.1875C69.0483 88.3883 64.3845 86.8021 59.1761 85.429L41.9886 80.7415C30.3409 77.5691 21.108 72.9053 14.2898 66.75C7.51894 60.5947 4.13352 52.4508 4.13352 42.3182C4.13352 33.9375 6.40625 26.6222 10.9517 20.3722C15.4972 14.1222 21.6525 9.26893 29.4176 5.8125C37.1828 2.30871 45.9422 0.556813 55.696 0.556813C65.5445 0.556813 74.233 2.28503 81.7614 5.74148C89.3371 9.19792 95.303 13.9564 99.6591 20.017C104.015 26.0303 106.288 32.9432 106.477 40.7557H85.3125ZM202.092 102.759V38.9091H223.398V148H202.518V129.108H201.381C198.872 134.932 194.847 139.785 189.308 143.668C183.815 147.503 176.973 149.42 168.782 149.42C161.774 149.42 155.572 147.882 150.174 144.804C144.824 141.679 140.61 137.062 137.532 130.955C134.502 124.847 132.987 117.295 132.987 108.298V38.9091H154.222V105.741C154.222 113.175 156.282 119.094 160.401 123.497C164.521 127.901 169.871 130.102 176.452 130.102C180.43 130.102 184.383 129.108 188.313 127.119C192.29 125.131 195.581 122.124 198.185 118.099C200.837 114.075 202.139 108.961 202.092 102.759ZM251.932 188.909V38.9091H272.67V56.5938H274.446C275.677 54.321 277.453 51.6932 279.773 48.7102C282.093 45.7273 285.313 43.1231 289.432 40.8977C293.551 38.625 298.996 37.4886 305.767 37.4886C314.574 37.4886 322.434 39.714 329.347 44.1648C336.259 48.6155 341.681 55.0312 345.611 63.4119C349.588 71.7926 351.577 81.8778 351.577 93.6676C351.577 105.457 349.612 115.566 345.682 123.994C341.752 132.375 336.354 138.838 329.489 143.384C322.623 147.882 314.787 150.131 305.98 150.131C299.351 150.131 293.93 149.018 289.716 146.793C285.549 144.567 282.282 141.963 279.915 138.98C277.547 135.997 275.724 133.346 274.446 131.026H273.168V188.909H251.932ZM272.741 93.4545C272.741 101.125 273.854 107.848 276.08 113.625C278.305 119.402 281.525 123.923 285.739 127.19C289.953 130.41 295.114 132.02 301.222 132.02C307.566 132.02 312.869 130.339 317.131 126.977C321.392 123.568 324.612 118.952 326.79 113.128C329.015 107.304 330.128 100.746 330.128 93.4545C330.128 86.2576 329.039 79.7945 326.861 74.0653C324.73 68.3362 321.51 63.8144 317.202 60.5C312.94 57.1856 307.614 55.5284 301.222 55.5284C295.066 55.5284 289.858 57.1146 285.597 60.2869C281.383 63.4593 278.187 67.8864 276.009 73.5682C273.83 79.25 272.741 85.8788 272.741 93.4545ZM422.386 150.202C411.638 150.202 402.382 147.905 394.616 143.312C386.899 138.672 380.933 132.162 376.719 123.781C372.552 115.353 370.469 105.481 370.469 94.1648C370.469 82.9905 372.552 73.142 376.719 64.6193C380.933 56.0966 386.804 49.4441 394.332 44.6619C401.908 39.8797 410.762 37.4886 420.895 37.4886C427.05 37.4886 433.016 38.5066 438.793 40.5426C444.569 42.5786 449.754 45.7746 454.347 50.1307C458.939 54.4867 462.562 60.1449 465.213 67.1051C467.865 74.018 469.19 82.4223 469.19 92.3182V99.8466H382.472V83.9375H448.381C448.381 78.3504 447.244 73.4025 444.972 69.0938C442.699 64.7377 439.503 61.3049 435.384 58.7955C431.312 56.286 426.529 55.0312 421.037 55.0312C415.071 55.0312 409.863 56.4991 405.412 59.4347C401.009 62.3229 397.599 66.1108 395.185 70.7983C392.817 75.4384 391.634 80.4811 391.634 85.9261V98.3551C391.634 105.647 392.912 111.849 395.469 116.963C398.073 122.077 401.695 125.983 406.335 128.682C410.975 131.333 416.397 132.659 422.599 132.659C426.624 132.659 430.294 132.091 433.608 130.955C436.922 129.771 439.787 128.019 442.202 125.699C444.616 123.379 446.463 120.514 447.741 117.105L467.841 120.727C466.231 126.646 463.343 131.83 459.176 136.281C455.057 140.685 449.872 144.117 443.622 146.58C437.42 148.994 430.341 150.202 422.386 150.202ZM492.752 148V38.9091H513.278V56.2386H514.414C516.403 50.3674 519.906 45.7509 524.925 42.3892C529.992 38.9801 535.721 37.2756 542.113 37.2756C543.439 37.2756 545.001 37.3229 546.8 37.4176C548.647 37.5123 550.091 37.6307 551.133 37.7727V58.0852C550.281 57.8485 548.765 57.5881 546.587 57.304C544.409 56.9725 542.231 56.8068 540.053 56.8068C535.034 56.8068 530.56 57.8722 526.63 60.0028C522.747 62.0862 519.67 64.9981 517.397 68.7386C515.124 72.4318 513.988 76.6458 513.988 81.3807V148H492.752Z" fill="white"/>
+</svg>
+
+
+        
+                        </a>
+                        <a href="/" class="search-container__logo--tablet">
+                            <svg class="svg-logo-tablet" version="1.0" fill=#fff viewBox="0 0 400 261" xmlns="http://www.w3.org/2000/svg">
+                                <g transform="translate(90 261) scale(.1 -.1)">
+                                    <path d="m969 2556c-76-21-150-67-219-136-96-96-148-210-175-382l-6-38h-253c-221 0-255-2-267-16-20-24 52-1614 76-1671 21-50 61-91 110-114 38-18 83-19 858-19 894 0 857-2 920 58 70 66 65 24 109 920 39 787 40 816 22 829-14 10-76 13-271 13h-253v38c0 107-78 286-163 374-105 110-217 159-361 157-44 0-102-7-127-13zm248-158c70-26 158-109 197-186 28-54 56-150 56-189v-23h-370-370v28c1 117 94 280 197 343 87 54 192 64 290 27zm-21-739c179-33 329-174 350-332l7-47h-120-120l-12 40c-27 91-102 139-215 140-119 0-191-52-238-170-19-47-22-76-22-190-1-148 7-184 56-263 55-87 168-126 275-96 63 17 125 79 144 142l13 47h118 118l-6-27c-59-244-221-373-469-373-310 0-495 211-495 565 0 350 188 570 491 574 36 1 92-4 125-10z"/>
+                                </g>
+                            </svg>
+                        </a>
+                        <div class="search-container__searchbox hide-on-mobile">
+                            <div class="header-searchbox-search">
+                                <div class="header-search__input-wrap">
+                                    <input type="text" class="header-search__input" placeholder="Tìm sản phẩm, Thương hiệu, và tên shop">
+                                    <div class="header-search__history">
+                                        <h3 class="search__history-heading">Lịch sử tìm kiếm</h3>
+                                        <ul class="search__history-list">
+                                            <li class="search__history-item">
+                                                <a href="">Quần hường</a>
+                                            </li>
+                                            <li class="search__history-item">
+                                                <a href="">Áo tím mộng mơ</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a href="" type="" class="header-search__btn">
+                                    <i class="header-search-icon fas fa-search"></i>
+                                </a>
+                            </div>
+                            <ul class="header-search-items hide-on-mobile-tablet">
+                               <li><a href="" class="search-items__item">Đao</a></li>
+                                <li><a href="" class="search-items__item">Đại đao</a></li>
+                                <li><a href="" class="search-items__item">Cung</a></li>
+                               <li><a href="" class="search-items__item">Thương</a></li>
+                                <li><a href="" class="search-items__item">Khiên</a></li>
+                                <li><a href="" class="search-items__item">Kiếm</a></li>
+                                <li><a href="" class="search-items__item">Trọng kiếm</a></li>
+                                <li><a href="" class="search-items__item">Chủy thủ</a></li>
+                            </ul>
+                        </div>
+                        <div class="search-container__cart-box">
+                            <div class="cart-box__cart">
+                                <i class="container__cart-icon fas fa-shopping-cart"></i>
+                                <span class="cart__quantity">3</span>
+                                <div class="cart-box__cart-notify">
+                                    <div class="cart-notify__no-item">
+                                        <img src="./asset/image/cart-notify-icon.png" alt="" class="notify-icon">
+                                        <p style="color: var(--text-color); text-align: center; font-size: 14px;">Chưa có sản phẩm</p>
+                                    </div>
+                                    <div class="cart-notify__has-item">
+                                        <h4 class="cart__heading">Sản phẩm mới thêm</h4>
+                                        <ul class="cart-has-item__list">
+                                            <li class="cart-has-item__item">
+                                                <img class="cart-has-item__item-img" src="./asset/image/cart-item_tn.jpg" alt="Sản phẩm">
+                                                <div class="cart-has-item__item-infor">
+                                                    <div class="cart-item-infor__general-infor">
+                                                        <h5 class="item-general-infor__item-name">Son môi đỏ, thoa đâu dính đó </h5>
+                                                        <div class="intem-general-infor__count-group">
+                                                            <span class="count-group__item-price">2.000.000đ</span>
+                                                            <span class="count-group__multify">x</span>
+                                                            <span class="count-group__quantity">1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cart-has-item__item-description">
+                                                        <span class="item-description__text">Phân loại hàng: Bạc</span>
+                                                        <span class="item-description__remove">Xóa</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cart-has-item__item">
+                                                <img class="cart-has-item__item-img" src="./asset/image/cart-item_tn.jpg" alt="Sản phẩm">
+                                                <div class="cart-has-item__item-infor">
+                                                    <div class="cart-item-infor__general-infor">
+                                                        <h5 class="item-general-infor__item-name">Bánh mỳ kẹp thịt</h5>
+                                                        <div class="intem-general-infor__count-group">
+                                                            <span class="count-group__item-price">2.000.000đ</span>
+                                                            <span class="count-group__multify">x</span>
+                                                            <span class="count-group__quantity">1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cart-has-item__item-description">
+                                                        <span class="item-description__text">Phân loại hàng: Bạc</span>
+                                                        <span class="item-description__remove">Xóa</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cart-has-item__item">
+                                                <img class="cart-has-item__item-img" src="./asset/image/cart-item_tn.jpg" alt="Sản phẩm">
+                                                <div class="cart-has-item__item-infor">
+                                                    <div class="cart-item-infor__general-infor">
+                                                        <h5 class="item-general-infor__item-name">Váy chống nắng cho nam giới, mặc vào chới với</h5>
+                                                        <div class="intem-general-infor__count-group">
+                                                            <span class="count-group__item-price">2.000.000đ</span>
+                                                            <span class="count-group__multify">x</span>
+                                                            <span class="count-group__quantity">1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cart-has-item__item-description">
+                                                        <span class="item-description__text">Phân loại hàng: Bạc</span>
+                                                        <span class="item-description__remove">Xóa</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <a href="" class="btn btn--primary cart-has-item__btn">Xem giỏ hàng</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="header-sort-bar">
+                <li class="header-sort-bar__item">
+                    <a href="" class="header-sort__item-link">Liên quan</a>
+                </li>
+                <li class="header-sort-bar__item header-sort-bar__item--active">
+                    <a href="" class="header-sort__item-link">Mới nhất</a>
+                </li>
+                <li class="header-sort-bar__item">
+                    <a href="" class="header-sort__item-link">Bán chạy</a>
+                </li>
+                <li class="header-sort-bar__item">
+                    <a href="" class="header-sort__item-link">Giá</a>
+                </li>
+            </ul>
+        </header>
+  
+
+
+
+    <div class="container_main">
+        <main role="main" class="pb-3 main">
+            <div class="container">
+                <div class="grid wide">
+                    <div class="container-content">
+                        <div class="row sm-gutter">
+                            <div class="col l-2 m-0 s-0">
+                                <nav class="category">
+                                    <h3 class="category-heading">
+                                        <i class="fas fa-list category-heading__icon"></i>
+                                        Danh mục
+                                    </h3>
+                                    <ul class="category-list">
+                                        <li class="category-item">
+                                            <a href="" class="category-item__link category-item__link--active">Sản phẩm</a>
+                                        </li>
+                                        <li class="category-item">
+                                            <a href="" class="category-item__link">Set thời trang</a>
+                                        </li>
+                                        <li class="category-item">
+                                            <a href="" class="category-item__link">Vũ khí</a>
+                                        </li>
+                                        <li class="category-item">
+                                            <a href="" class="category-item__link">Giáp</a>
+                                        </li>
+                                        <li class="category-item">
+                                            <a href="" class="category-item__link">Trang sức</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        
+                                 @RenderBody()
+                        </div>
+                    </div>   
+                </div>
+            </div>
+        </main>
+    </div>
+     <footer class="footer">
+            <div class="grid wide">
+                <div class="row footer-row">
+                    <div class="col l-2-4 m-4 s-6">
+                        <div class="footer-item">
+                            <h3 class="footer-item__heading">CHĂM SÓC KHÁCH HÀNG</h3>
+                            <ul class="footer-item__list">
+                                <li class="footer-item__list-item">
+                                    <a href="" class="footer-item__link">Super Blog</a>
+                                </li>
+                                <li class="footer-item__list-item">
+                                    <a href="" class="footer-item__link">Super Mall</a>
+                                </li>
+                                <li class="footer-item__list-item">
+                                    <a href="" class="footer-item__link">Hướng dẫn mua</a>
+                                </li>
+                                <li class="footer-item__list-item">
+                                    <a href="" class="footer-item__link">Hướng dẫn bán</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-4 s-6">
+                        <div class="footer-item">
+                            <h3 class="footer-item__heading">VỀ VỚI SUPER</h3>
+                            <ul class="footer-item__list">
+                                <li class="footer-item__list-item">
+                                    <a href="" class="footer-item__link">Giới thiệu về Super</a>
+                                </li>
+                                <li class="footer-item__list-item">
+                                    <a href="" class="footer-item__link">Super tuyển dụng</a>
+                                </li>
+                                <li class="footer-item__list-item">
+                                    <a href="" class="footer-item__link">Điều khoản Super</a>
+                                </li>
+                                <li class="footer-item__list-item">
+                                    <a href="" class="footer-item__link">Chính sách bảo mật</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-4 s-6">
+                        <div class="footer-item">
+                            <h3 class="footer-item__heading">THANH TOÁN</h3>
+                            <ul class="footer-item__list-payment">
+                                <li class="footer-item__list-item-payment">
+    
+                                </li>
+                                <li class="footer-item__list-item-payment">
+    
+                                </li>
+                                <li class="footer-item__list-item-payment">
+    
+                                </li>
+                                <li class="footer-item__list-item-payment">
+    
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-4 s-6">
+                        <div class="footer-item">
+                            <h3 class="footer-item__heading">THEO DÕI CHÚNG TÔI</h3>
+                            <ul class="footer-item__list">
+                                <li class="footer-item__list-item">
+                                    <i class="footer-social-icon fab fa-facebook"></i>
+                                    <a href="" class="footer-item__link">Facebook</a>
+                                </li>
+                                <li class="footer-item__list-item">
+                                    <i class="footer-social-icon fab fa-instagram-square"></i>
+                                    <a href="" class="footer-item__link">Instagram</a>
+                                </li>
+                                <li class="footer-item__list-item">
+                                    <i class="footer-social-icon fab fa-linkedin"></i>
+                                    <a href="" class="footer-item__link">LinkedIn</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-4 s-6">
+                        <div class="footer-item"></div>
+                            <h3 class="footer-item__heading">TẢI ỨNG DỤNG SUPER</h3>
+                            <div class="footer-app-download">
+                                <div class="app-download__qr footer-qr">
+                                    <img class="footer-qr" src="./asset/image/qr_code.png" alt="QR Code">
+                                </div>
+                                <ul class="app-download-list">
+                                    <li class="app-download__item">
+                                        <a href="" class="app-download__item-link">
+                                            <img src="./asset/image/app_store-icon.png" alt="" class="download-list__item-icon">
+                                        </a>
+                                    </li>
+                                    <li class="app-download__item">
+                                        <a href="" class="app-download__item-link">
+                                            <img src="~/asset/image/google_play-icon.png" alt="" class="download-list__item-icon">
+                                        </a>
+                                    </li>
+                                    <li class="app-download__item">
+                                        <a href="" class="app-download__item-link">
+                                            <img src="./asset/image/app_gallery-icon.png" alt="" class="download-list__item-icon">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="footer-under">
+                        <span class="footer-under__text">
+                            © 2023 Super. Tất cả các quyền được bảo lưu.
+                        </span>
+                    </div>
+                </div>
+           
+        </footer>
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

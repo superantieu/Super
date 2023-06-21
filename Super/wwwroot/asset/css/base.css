@@ -1,0 +1,139 @@
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color: #fb5533;
+    --border-color: #dbdbdb;
+    --footer-text-color: #0000008A;
+    
+    --header-height: 120px;
+    --navbar-height: 34px;
+    --header-sort-bar-height: 46px;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+p{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+
+/* Responsive */
+
+@keyframes slow-show{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes growth{
+    from{
+        transform: scale(var(--growth-from));
+    }
+    to{
+        transform: scale(var(--growth-to));
+    }
+}
+
+.btn{
+    min-width: 124px;
+    height: 34px;
+    border: none;
+    border-radius: 2.5px;
+    font-size: 1.4rem;
+    padding: 0;
+    cursor: pointer;
+    color: var(--text-color);
+    line-height: 1.16rem;
+    background-color: var(--white-color);
+    text-align: center;
+    line-height: 34px;
+}
+
+.btn:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn.btn--primary{
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.btn.btn-size-s{
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+/* Select input */
+.select-input{
+    min-width: 124px;
+    height: 34px;
+    border: none;
+    border-radius: 2.5px;
+    font-size: 1.4rem;
+    padding: 0;
+    cursor: pointer;
+    color: var(--text-color);
+    line-height: 1.16rem;
+    background-color: var(--white-color);
+    text-align: center;
+    line-height: 34px;
+}
+
+/* Pagination */
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-item{
+    margin: 0 12px;
+}
+
+.pagination-item--active .pagination-item__link{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.pagination-item--active .pagination-item__link:hover{
+    background-color: #fb5433d3;
+}
+
+.pagination-item__link{
+    color: #939393;
+    font-size: 2rem;
+    min-width: 40px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.pagination-item__icon{
+
+}
