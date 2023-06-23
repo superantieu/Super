@@ -6845,6 +6845,30 @@
       "PackagePath": "staticwebassets\\asset\\image\\Shopee.svg"
     },
     {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\Slice 1.svg",
+      "PackagePath": "staticwebassets\\asset\\image\\Slice 1.svg"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\Slice 2.svg",
+      "PackagePath": "staticwebassets\\asset\\image\\Slice 2.svg"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\Super (1).svg",
+      "PackagePath": "staticwebassets\\asset\\image\\Super (1).svg"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\Super.svg",
+      "PackagePath": "staticwebassets\\asset\\image\\Super.svg"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\Untitled.svg",
+      "PackagePath": "staticwebassets\\asset\\image\\Untitled.svg"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\Vector.svg",
+      "PackagePath": "staticwebassets\\asset\\image\\Vector.svg"
+    },
+    {
       "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\app_gallery-icon.png",
       "PackagePath": "staticwebassets\\asset\\image\\app_gallery-icon.png"
     },
@@ -6917,8 +6941,52 @@
       "PackagePath": "staticwebassets\\asset\\image\\product-item_1.jpg"
     },
     {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\product-item_10.jpg",
+      "PackagePath": "staticwebassets\\asset\\image\\product-item_10.jpg"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\product-item_11.jpg",
+      "PackagePath": "staticwebassets\\asset\\image\\product-item_11.jpg"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\product-item_12.jpg",
+      "PackagePath": "staticwebassets\\asset\\image\\product-item_12.jpg"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\product-item_13.jpg",
+      "PackagePath": "staticwebassets\\asset\\image\\product-item_13.jpg"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\product-item_14.jpg",
+      "PackagePath": "staticwebassets\\asset\\image\\product-item_14.jpg"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\product-item_15.jpg",
+      "PackagePath": "staticwebassets\\asset\\image\\product-item_15.jpg"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\product-item_16.jpg",
+      "PackagePath": "staticwebassets\\asset\\image\\product-item_16.jpg"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\product-item_17.jpg",
+      "PackagePath": "staticwebassets\\asset\\image\\product-item_17.jpg"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\product-item_18.jpg",
+      "PackagePath": "staticwebassets\\asset\\image\\product-item_18.jpg"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\product-item_19.jpg",
+      "PackagePath": "staticwebassets\\asset\\image\\product-item_19.jpg"
+    },
+    {
       "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\product-item_2.jpg",
       "PackagePath": "staticwebassets\\asset\\image\\product-item_2.jpg"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\product-item_20.jpg",
+      "PackagePath": "staticwebassets\\asset\\image\\product-item_20.jpg"
     },
     {
       "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\product-item_3.jpg",
@@ -6935,6 +7003,18 @@
     {
       "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\product-item_6.jpg",
       "PackagePath": "staticwebassets\\asset\\image\\product-item_6.jpg"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\product-item_7.jpg",
+      "PackagePath": "staticwebassets\\asset\\image\\product-item_7.jpg"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\product-item_8.jpg",
+      "PackagePath": "staticwebassets\\asset\\image\\product-item_8.jpg"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\product-item_9.jpg",
+      "PackagePath": "staticwebassets\\asset\\image\\product-item_9.jpg"
     },
     {
       "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\product-item_tn2.jpg",
@@ -6971,6 +7051,154 @@
     {
       "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\HELP-US-OUT.txt",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\HELP-US-OUT.txt"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\css\\font-awesome.css",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\css\\font-awesome.css"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\less\\animated.less",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\less\\animated.less"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\less\\bordered-pulled.less",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\less\\bordered-pulled.less"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\less\\core.less",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\less\\core.less"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\less\\fixed-width.less",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\less\\fixed-width.less"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\less\\font-awesome.less",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\less\\font-awesome.less"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\less\\icons.less",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\less\\icons.less"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\less\\larger.less",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\less\\larger.less"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\less\\list.less",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\less\\list.less"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\less\\mixins.less",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\less\\mixins.less"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\less\\path.less",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\less\\path.less"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\less\\rotated-flipped.less",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\less\\rotated-flipped.less"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\less\\screen-reader.less",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\less\\screen-reader.less"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\less\\stacked.less",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\less\\stacked.less"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\less\\variables.less",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\less\\variables.less"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\_animated.scss",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\_animated.scss"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\_bordered-pulled.scss",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\_bordered-pulled.scss"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\_core.scss",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\_core.scss"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\_fixed-width.scss",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\_fixed-width.scss"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\_icons.scss",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\_icons.scss"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\_larger.scss",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\_larger.scss"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\_list.scss",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\_list.scss"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\_path.scss",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\_path.scss"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\_rotated-flipped.scss",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\_rotated-flipped.scss"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\_screen-reader.scss",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\_screen-reader.scss"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\_stacked.scss",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\_stacked.scss"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\_variables.scss"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\font-awesome.scss",
+      "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\font-awesome.scss"
     },
     {
       "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\js\\site.js",

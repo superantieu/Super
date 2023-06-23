@@ -16,12 +16,32 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = F:\1.Study\C#\Super\Super
 build_property._RazorSourceGeneratorDebug = 
 
+[F:/1.Study/C\#/Super/Super/Views/Hang/CapNhat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ1xDYXBOaGF0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/1.Study/C\#/Super/Super/Views/Hang/Them.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ1xUaGVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/1.Study/C\#/Super/Super/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/1.Study/C\#/Super/Super/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/1.Study/C\#/Super/Super/Views/Home/_partialDanhSachHang.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfcGFydGlhbERhbmhTYWNoSGFuZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/1.Study/C\#/Super/Super/Views/Home/_partialHang.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfcGFydGlhbEhhbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/1.Study/C\#/Super/Super/Views/Home/_partialThemHang.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfcGFydGlhbFRoZW1IYW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/1.Study/C\#/Super/Super/Views/Shared/Error.cshtml]

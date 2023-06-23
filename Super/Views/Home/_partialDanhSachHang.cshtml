@@ -1,0 +1,52 @@
+﻿
+
+<div class="quanly hide-on-mobile col l-10 m-12 s-12">
+    <h1 class="quanlyds">Quản lý danh sách hàng</h1>
+<table class="table table-striped overflow-scroll">
+    <thead>
+        <tr class="text-center">
+            <th scope="col">STT</th>
+            <th scope="col">Mã hàng</th>
+            <th scope="col">Tên hàng</th>
+            <th scope="col">Đơn giá hàng</th>
+            <th scope="col">Link hình ảnh</th>
+            <th scope="col">Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            int i = 0;
+            foreach (var item in Model)
+            {
+                i++;
+                <tr>
+                    <td class="text-center">@i</td>
+                    <td class="text-center">@item.MaHang</td>
+                    <td class="text-center">@item.TenHang</td>
+                    <td class="text-center">@item.DonGiaHang</td>
+                    <td class="text-center">@item.HinhAnh</td>
+                  @*  <td class="text-center @((bool)item.IsActive ? "text-success" : "text-danger")">
+                        @((bool)item.IsActive ? "Kích hoạt" : "Tạm khóa")
+                    </td>*@
+                    <td class="text-center">
+                        <a class="px-2" href="@Url.Action("Xoa", "Hang", new { mahang = item.MaHang })">
+                            <i class="fa fa-trash text-danger" aria-hidden="true"></i>
+                        </a>
+                        <a class="px-2" href="@Url.Action("CapNhat", "Hang", new { mahang = item.MaHang, isUpdate = false})">
+                           <i class="fa fa-wrench" aria-hidden="true"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <caption>
+                Không có dữ liệu
+            </caption>
+        }
+    </tbody>
+</table>
+
+</div>

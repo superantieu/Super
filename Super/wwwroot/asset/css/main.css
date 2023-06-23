@@ -1484,3 +1484,33 @@ i.product__like-true{
     border-left: 1px solid #e5e5e5;
     transform: translateY(-50%);
 }
+.quanly {
+    margin-top: 35px;
+    border: 2px solid orange;
+}
+.quanlyds {
+    font-size: 2rem;
+    padding: 10px;
+}
+.table {
+    font-size: 1.6rem;
+}
+.updatedata {
+    scale: 1.2;
+    margin-bottom: 100px;
+}
+.btn-them {
+    margin: 20px auto;
+    background: var(--primary-color);
+}
+.page-button {
+    margin: 16px auto 30px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.btn-next, .btn-previous {
+    background: var(--primary-color);
+    color: #fff;
+}

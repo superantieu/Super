@@ -52,6 +52,9 @@ public partial class QlbhContext : DbContext
         modelBuilder.Entity<Hang>(entity =>
         {
             entity.HasOne(d => d.MaNhanHieuNavigation).WithMany(p => p.Hangs).HasConstraintName("FK_Hang_NhanHieu");
+            entity.Property(e => e.Filter)
+            .HasMaxLength(255)
+            .HasComputedColumnSql("LOWER([MaKhoa] + [TenKhoa] + [SDT])");
         });
 
         modelBuilder.Entity<HoaDon>(entity =>

@@ -12,8 +12,8 @@ using Super.Models;
 namespace Super.Migrations
 {
     [DbContext(typeof(QlbhContext))]
-    [Migration("20230621021129_Sup")]
-    partial class Sup
+    [Migration("20230623022258_Supcua")]
+    partial class Supcua
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -28,6 +28,7 @@ public partial class Hang
 
     [StringLength(150)]
     public string? HinhAnh { get; set; }
+    public string Filter { get; set; }
 
     [InverseProperty("MaHangNavigation")]
     public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; } = new List<ChiTietHoaDon>();
