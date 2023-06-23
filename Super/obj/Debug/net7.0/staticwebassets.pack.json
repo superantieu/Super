@@ -6837,6 +6837,18 @@
       "PackagePath": "staticwebassets\\asset\\fonts\\fontawesome\\webfonts\\fa-solid-900.woff2"
     },
     {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\Carousel\\cs-01.jpg",
+      "PackagePath": "staticwebassets\\asset\\image\\Carousel\\cs-01.jpg"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\Carousel\\cs-02.jpg",
+      "PackagePath": "staticwebassets\\asset\\image\\Carousel\\cs-02.jpg"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\Carousel\\cs-03.jpg",
+      "PackagePath": "staticwebassets\\asset\\image\\Carousel\\cs-03.jpg"
+    },
+    {
       "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\image\\Shopee.png",
       "PackagePath": "staticwebassets\\asset\\image\\Shopee.png"
     },

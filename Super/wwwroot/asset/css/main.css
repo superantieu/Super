@@ -1514,3 +1514,9 @@ i.product__like-true{
     background: var(--primary-color);
     color: #fff;
 }
+.d-block {
+    
+    object-fit: cover;
+    height: 500px;
+}
+}
