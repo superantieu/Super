@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NuGet.Protocol;
 using Super.Models;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Super.Controllers
 {
@@ -15,6 +16,20 @@ namespace Super.Controllers
         {
             var item = _context.Hangs.ToList();
             return View(item);
+        }
+        public IActionResult innerIndex(int? mahang, string? tenhang, string? dongiaban, string? manhanhieu, string? hinhanh)
+        {
+            var itemToUpdate = _context.Hangs.FirstOrDefault(x => x.MaHang == mahang);
+
+         
+                //itemToUpdate.TenHang = tenhang;
+                //itemToUpdate.DonGiaHang = dongiaban;
+                //itemToUpdate.MaNhanHieu = manhanhieu;
+                //itemToUpdate.HinhAnh = hinhanh;
+                //_context.Update(itemToUpdate);
+                //_context.SaveChanges();
+                //return RedirectToAction("Index");
+            return View(itemToUpdate);
         }
         public IActionResult Xoa(int? mahang)
         {

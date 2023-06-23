@@ -1,0 +1,77 @@
+﻿@model Super.Models.Hang
+@{
+    ViewData["Title"] = "innerIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<div class="d-flex justify-content-center">
+    <div class="updatedata col-6 px-5 pt-5 border rounded-3 shadow-lg">
+        <h2 class="text-center fw-bold pb-4">Edit tin khoa</h2>
+        <hr />
+        <form action="/Hang/innerIndex" method="post">
+            <div class="mb-4">
+                <label for="makhoa" class="form-label fw-bolder">Mã Hàng</label>
+                <input type="text" class="form-control" id="mahang" name="mahang" value="@Model.MaHang" aria-describedby="text">
+            </div><div class="mb-4">
+                <label for="makhoa" class="form-label fw-bolder">Tên Hàng</label>
+                <input type="text" class="form-control" id="tenhang" name="tenhang" value="@Model.TenHang" aria-describedby="text">
+            </div>
+            <div class="mb-4">
+                <label for="tenkhoa" class="form-label fw-bolder">Đơn giá bán</label>
+                <input type="text" class="form-control" id="dongiaban" name="dongiaban" value="@Model.DonGiaHang" aria-describedby="text">
+            </div>
+            <div class="mb-4">
+                <label for="manhanhieu" class="form-label fw-bolder">Mã Nhãn Hiệu</label>
+                <input type="text" class="form-control" id="manhanhieu" name="manhanhieu" value="@Model.MaNhanHieu" aria-describedby="text">
+            </div>
+            <div class="mb-4">
+                <label for="sodienthoai" class="form-label fw-bolder">Link Hình Ảnh</label>
+                <input type="text" class="form-control" id="hinhanh" name="hinhanh" value="@Model.HinhAnh" aria-describedby="text">
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="kichhoat" id="kichhoat">
+                <label class="form-check-label" for="kichhoat">
+                    Kích hoạt
+                </label>
+            </div>
+            <hr />
+            <div class="d-flex align-items-center justify-content-center my-5 gap-5">
+                <button type="submit" id="themgiohang" class="btn btn-primary px-4 py-2" >Edit</button>
+            </div>
+        </form>
+    </div>
+</div>*@
+
+
+            <div class="innerProduct">
+                <div class="product-img">
+                    <img class="inner-img" src="@Model.HinhAnh">
+                    <h2 class="inner-desc product-info__heading">@Model.MoTa</h2>
+                </div>
+           
+                <div class="product-info" style="width: 50%;">
+                    <h1 class="inner-heading product-info__heading">@Model.TenHang</h1>
+                    <span class="inner-hagstag product-info__hastag">#@Model.MaNhanHieu</span>
+                    <div class="inner-price product-info__price">
+                        <span class="inner-infor__price product-info__price-new">Giá tiền: @Model.DonGiaHang đ</span>
+                    </div>
+
+                    <form action="/HoaDon/CapNhat" method="post">
+                        <div class="mb-4">
+                            <label for="soluong" class="inner-label form-label fw-bolder">Số lượng</label>
+                            <input type="number" min="1" class="inner-input form-control" id="soluong" name="soluong" aria-describedby="text">
+                        </div>
+                        <hr class="inner-hr"/>
+                        <div class="d-flex align-items-center justify-content-center my-5 gap-5">
+                            <button type="submit" id="themgiohang" class="inner-btn btn btn-primary px-4 py-2" >Thêm vào giỏ hàng</button>
+                        </div>
+                    </form>
+
+
+
+
+               
+                </div>
+         
+
+          </div>

@@ -20,6 +20,7 @@
     <link href="~/asset/css/base.css" rel="stylesheet" />
     <link href="~/asset/css/main.css" rel="stylesheet" />
     <link href="~/asset/css/responsive.css" rel="stylesheet" />
+    <link href="~/asset/css/inner.css" rel="stylesheet" />
     <link href="~/asset/fonts/fontawesome/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="icon" sizes="192x192" href="~/asset/image/icons/icon-192x192.png">
@@ -344,7 +345,7 @@
             <div class="container">
 
                                 <!-- Carousel -->
-                <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                <div id="demo" class="carousel slide hide-on-mobile" data-bs-ride="carousel">
 
                   <!-- Indicators/dots -->
                   <div class="carousel-indicators">
@@ -376,7 +377,7 @@
                 </div>
 
 
-                <div class="grid wide">
+               @* <div class="grid wide">
                     <div class="container-content">
                         <div class="row sm-gutter" style="justify-content: flex-end">
                             <div class="col l-2 m-0 s-0">
@@ -403,12 +404,12 @@
                                         </li>
                                     </ul>
                                 </nav>
-                            </div>
+                            </div>*@
                         
                                  @RenderBody()
-                        </div>
+                     @*   </div>
                     </div>   
-                </div>
+                </div>*@
             </div>
         </main>
     </div>

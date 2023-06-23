@@ -1,119 +1,159 @@
 ﻿@*View danh sách Hàng*@
-<div class="col l-10 m-12 s-12">
-    <div class="home-filter hide-on-mobile-tablet">
-        <div class="home-filter-left">
-            <span class="home-filter__label">Sắp xếp theo</span>
-            <a href="" class="home-filter__btn btn">Phổ biến</a>
-            <a href="" class="home-filter__btn btn btn--primary">Mới nhất</a>
-            <a href="" class="home-filter__btn btn">Bán chạy</a>
+
+
+<div class="grid wide">
+    <div class="container-content">
+        <div class="row sm-gutter" @*style="justify-content: flex-end*@">
+            <div class="col l-2 m-0 s-0">
+                <nav class="category">
+                    <h3 class="category-heading">
+                        <i class="fas fa-list category-heading__icon"></i>
+                        Danh mục
+                    </h3>
+                    <ul class="category-list">
+                        <li class="category-item">
+                            <a href="" class="category-item__link category-item__link--active">Sản phẩm</a>
+                        </li>
+                        <li class="category-item">
+                            <a href="" class="category-item__link">Set thời trang</a>
+                        </li>
+                        <li class="category-item">
+                            <a href="" class="category-item__link">Vũ khí</a>
+                        </li>
+                        <li class="category-item">
+                            <a href="" class="category-item__link">Giáp</a>
+                        </li>
+                        <li class="category-item">
+                            <a href="" class="category-item__link">Trang sức</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+
+
+
+
+            <div class="col l-10 m-12 s-12">
+                <div class="home-filter hide-on-mobile-tablet">
+                    <div class="home-filter-left">
+                        <span class="home-filter__label">Sắp xếp theo</span>
+                        <a href="" class="home-filter__btn btn">Phổ biến</a>
+                        <a href="" class="home-filter__btn btn btn--primary">Mới nhất</a>
+                        <a href="" class="home-filter__btn btn">Bán chạy</a>
             
-            <div class="select-input">
-                <span class="select-input__label">Giá</span>
-                <i class="fas fa-angle-down dropdown-arrow-icon"></i>
-                <div class="select-input__menu">
-                    <a href="" class="select-input__item">Giá: Thấp đến Cao</a>
-                    <a href="" class="select-input__item">Giá: Cao đến Thấp</a>
+                        <div class="select-input">
+                            <span class="select-input__label">Giá</span>
+                            <i class="fas fa-angle-down dropdown-arrow-icon"></i>
+                            <div class="select-input__menu">
+                                <a href="" class="select-input__item">Giá: Thấp đến Cao</a>
+                                <a href="" class="select-input__item">Giá: Cao đến Thấp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-filter-right">
+                        <span class="home-filter__page-number">
+                            <span class="home-filter__page-curent">1</span>
+                            /14
+                        </span>
+                        <div class="home-filter__page-control">
+                            <a href="" class="home-filter__page-btn home-filter__page-btn--disable">
+                                <i class="fas fa-angle-left home-filter__page-btn-icon home-filter__page-btn-icon--disable"></i>
+                            </a>
+                            <a href="" class="home-filter__page-btn">
+                                <i class="fas fa-angle-right home-filter__page-btn-icon"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="home-filter-right">
-            <span class="home-filter__page-number">
-                <span class="home-filter__page-curent">1</span>
-                /14
-            </span>
-            <div class="home-filter__page-control">
-                <a href="" class="home-filter__page-btn home-filter__page-btn--disable">
-                    <i class="fas fa-angle-left home-filter__page-btn-icon home-filter__page-btn-icon--disable"></i>
-                </a>
-                <a href="" class="home-filter__page-btn">
-                    <i class="fas fa-angle-right home-filter__page-btn-icon"></i>
-                </a>
-            </div>
-        </div>
-    </div>
 
-    <nav class="mobile-category">
-        <ul class="mobile-category__list">
-            <li class="mobile-category__item">
-                <a href="" class="mobile-category__item-link">Trang điểm mặt</a>
-            </li>
-            <li class="mobile-category__item">
-                <a href="" class="mobile-category__item-link">Trang điểm môi</a>
-            </li>
-            <li class="mobile-category__item">
-                <a href="" class="mobile-category__item-link">Trang điểm mắt</a>
-            </li>
-            <li class="mobile-category__item">
-                <a href="" class="mobile-category__item-link">Trang điểm vùng xạm</a>
-            </li>
-        </ul>
-    </nav>
+                <nav class="mobile-category">
+                    <ul class="mobile-category__list">
+                        <li class="mobile-category__item">
+                            <a href="" class="mobile-category__item-link">Trang điểm mặt</a>
+                        </li>
+                        <li class="mobile-category__item">
+                            <a href="" class="mobile-category__item-link">Trang điểm môi</a>
+                        </li>
+                        <li class="mobile-category__item">
+                            <a href="" class="mobile-category__item-link">Trang điểm mắt</a>
+                        </li>
+                        <li class="mobile-category__item">
+                            <a href="" class="mobile-category__item-link">Trang điểm vùng xạm</a>
+                        </li>
+                    </ul>
+                </nav>
 
-    <div class="home-product">
-        <div id="searchList" class="row sm-gutter" style="justify-content: flex-start">
-            @* Danh sach san pham*@
-                @if (Model != null)
-                        {
-                            int i = 0;
-                                foreach (var item in Model)
-                                 {
-                                    i++;
-                                    <div class="supcua col l-2-4 m-4 s-6">
-                                        <a class="product">
-                                            <div class="product-image-01" style="background-image: url(@item.HinhAnh);">
-                                            </div>
-                                            <div class="product-info">
-                                                <h4 class="product-info__heading">@item.TenHang</h4>
-                                                <span class="product-info__hastag">#@item.MaNhanHieu</span>
-                                                <div class="product-info__price">
-                                                    <span class="product-info__price-old">52.000.000đ</span>
-                                                    <span class="product-info__price-new">@item.DonGiaHang đ</span>
-                                                </div>
-                                                <div class="product-react">
-                                                    <span href="" class="product-react__like product-react__like--liked">
-                                                        <i class="far fa-heart product__like-false"></i>
-                                                        <i class="fas fa-heart product__like-true"></i>
-                                                    </span>
-                                                    <div class="product-sold">
-                                                        <span class="product-sold__star-point">
-                                                            <i class="product-sold__star-point--gold fas fa-star"></i>
-                                                            <i class="product-sold__star-point--gold fas fa-star"></i>
-                                                            <i class="product-sold__star-point--gold fas fa-star"></i>
-                                                            <i class="product-sold__star-point--gold fas fa-star"></i>
-                                                            <i class="fas fa-star"></i>
-                                                        </span>
-                                                        <p class="product-sold__text">Đã bán</p>
-                                                        <p class="product-sold__amount">41,7k</p>
-                                                    </div>
-                                                </div>
-                                                <span class="product-location">Hà Nội</span>
-                                            </div>
-                                            <div class="product-label">
-                                                <div class="product-label__like">
-                                                    <i class="fas fa-check"></i>
-                                                    <span class="product-label__like-text">Yêu thích</span>
-                                                </div>
-                                                <div class="product-label__saleoff">
-                                                    <span class="product-label__saleoff-percent">SALE</span>
-                                                    <span class="product-label__saleoff-text">OFF</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>  
-               
-                                  }
-                             }
+                <div class="home-product">
+                    <div id="searchList" class="row sm-gutter" style="justify-content: flex-start">
+                        @* Danh sach san pham*@
+                            @if (Model != null)
+                            {
+                                        int i = 0;
+                                            foreach (var item in Model)
+                                            {  i++;
+                                                    <div class="supcua col l-2-4 m-4 s-6" style="margin: 0rem !important">
+                                                        <a class="product" href="@Url.Action("innerIndex", "Hang", new { mahang = item.MaHang })">
+                                                            <div class="product-image-01" style="background-image: url(@item.HinhAnh);">
+                                                            </div>
+                                                            <div class="product-info">
+                                                                <h4 class="product-info__heading">@item.TenHang</h4>
+                                                                <span class="product-info__hastag">#@item.MaNhanHieu</span>
+                                                                <div class="product-info__price">
+                                                                    <span class="product-info__price-old">52.000.000đ</span>
+                                                                    <span class="product-info__price-new">@item.DonGiaHang đ</span>
+                                                                </div>
+                                                                <div class="product-react">
+                                                                    <span href="" class="product-react__like product-react__like--liked">
+                                                                        <i class="far fa-heart product__like-false"></i>
+                                                                        <i class="fas fa-heart product__like-true"></i>
+                                                                    </span>
+                                                                    <div class="product-sold">
+                                                                        <span class="product-sold__star-point">
+                                                                            <i class="product-sold__star-point--gold fas fa-star"></i>
+                                                                            <i class="product-sold__star-point--gold fas fa-star"></i>
+                                                                            <i class="product-sold__star-point--gold fas fa-star"></i>
+                                                                            <i class="product-sold__star-point--gold fas fa-star"></i>
+                                                                            <i class="fas fa-star"></i>
+                                                                        </span>
+                                                                        <p class="product-sold__text">Đã bán</p>
+                                                                        <p class="product-sold__amount">41,7k</p>
+                                                                    </div>
+                                                                </div>
+                                                                <span class="product-location">Hà Nội</span>
+                                                            </div>
+                                                            <div class="product-label">
+                                                                <div class="product-label__like">
+                                                                    <i class="fas fa-check"></i>
+                                                                    <span class="product-label__like-text">Yêu thích</span>
+                                                                </div>
+                                                                <div class="product-label__saleoff">
+                                                                    <span class="product-label__saleoff-percent">SALE</span>
+                                                                    <span class="product-label__saleoff-text">OFF</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>  
+                                            }
+                            }
                                                                      
-        </div>
-        <div class="page-button" aria-label="Page navigation example">
+                    </div>
+                    <div class="page-button" aria-label="Page navigation example">
   
-            <button class="btn page-item"><a class="btn-next page-link" href="@Url.Action("Index" , "Home", new { page = ViewBag.CurrentPage - 1})">Previous</a></button>
-            <button class="btn page-item"><a class="btn-previous page-link" href="@Url.Action("Index" , "Home", new { page = ViewBag.CurrentPage + 1})">Next</a></button>
+                        <button class="btn page-item"><a class="btn-next page-link" href="@Url.Action("Index" , "Home", new { page = ViewBag.CurrentPage - 1})">Previous</a></button>
+                        <button class="btn page-item"><a class="btn-previous page-link" href="@Url.Action("Index" , "Home", new { page = ViewBag.CurrentPage + 1})">Next</a></button>
   
-        </div>
-         <a class="btn btn-them nav-link text-dark" asp-area="" asp-controller="Hang" asp-action="Them">
-             <span style="color: #fff">Click vào đây để thêm hàng!</span>
- </a>
-    </div>
+                    </div>
+                        <a class="btn btn-them nav-link text-dark" asp-area="" asp-controller="Hang" asp-action="Them">
+                            <span style="color: #fff">Click vào đây để thêm hàng!</span>
+                        </a>
+                </div>
                           
-</div>  
+            </div>  
+
+
+
+        </div>
+    </div>   
+</div>
+        

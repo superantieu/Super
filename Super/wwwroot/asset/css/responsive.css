@@ -64,7 +64,10 @@
     .hide-on-tablet{
         display: none;
     }
-
+    .d-block{
+        height: 300px;
+    }
+  
 }
 
 /* Mobile */

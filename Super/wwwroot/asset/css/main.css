@@ -1486,8 +1486,11 @@ i.product__like-true{
 }
 .quanly {
     margin-top: 35px;
+    margin-right: 50px;
+    margin-left: calc(20% - 10px);
     border: 2px solid orange;
 }
+
 .quanlyds {
     font-size: 2rem;
     padding: 10px;
