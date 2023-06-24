@@ -5,12 +5,48 @@
       "PackagePath": "staticwebassets\\Super.bundle.scp.css"
     },
     {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\Admin-assets\\assets\\demo\\chart-area-demo.js",
+      "PackagePath": "staticwebassets\\Admin-assets\\assets\\demo\\chart-area-demo.js"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\Admin-assets\\assets\\demo\\chart-bar-demo.js",
+      "PackagePath": "staticwebassets\\Admin-assets\\assets\\demo\\chart-bar-demo.js"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\Admin-assets\\assets\\demo\\chart-pie-demo.js",
+      "PackagePath": "staticwebassets\\Admin-assets\\assets\\demo\\chart-pie-demo.js"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\Admin-assets\\assets\\demo\\datatables-demo.js",
+      "PackagePath": "staticwebassets\\Admin-assets\\assets\\demo\\datatables-demo.js"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\Admin-assets\\assets\\img\\error-404-monochrome.svg",
+      "PackagePath": "staticwebassets\\Admin-assets\\assets\\img\\error-404-monochrome.svg"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\Admin-assets\\css\\styles.css",
+      "PackagePath": "staticwebassets\\Admin-assets\\css\\styles.css"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\Admin-assets\\js\\datatables-simple-demo.js",
+      "PackagePath": "staticwebassets\\Admin-assets\\js\\datatables-simple-demo.js"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\Admin-assets\\js\\scripts.js",
+      "PackagePath": "staticwebassets\\Admin-assets\\js\\scripts.js"
+    },
+    {
       "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\css\\base.css",
       "PackagePath": "staticwebassets\\asset\\css\\base.css"
     },
     {
       "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\css\\grid.css",
       "PackagePath": "staticwebassets\\asset\\css\\grid.css"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\css\\inner.css",
+      "PackagePath": "staticwebassets\\asset\\css\\inner.css"
     },
     {
       "Id": "F:\\1.Study\\C#\\Super\\Super\\wwwroot\\asset\\css\\main.css",

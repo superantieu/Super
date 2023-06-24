@@ -6,7 +6,7 @@
 
 
 <div class="d-flex justify-content-center">
-    <div class="updatedata col-6 px-5 pt-5 border rounded-3 shadow-lg">
+    <div class="updatedata col-6 px-5 pt-5 border rounded-3 shadow-lg" style="margin-top: 100px">
         <h2 class="text-center fw-bold pb-4">Edit tin khoa</h2>
         <hr />
         <form action="/Hang/CapNhat" method="post">
@@ -23,7 +23,7 @@
             </div>
             <div class="mb-4">
                 <label for="manhanhieu" class="form-label fw-bolder">Mã Nhãn Hiệu</label>
-                <input type="text" min="1" class="form-control" id="manhanhieu" name="manhanhieu" value="@Model.MaNhanHieu" aria-describedby="text">
+                <input type="text" class="form-control" id="manhanhieu" name="manhanhieu" value="@Model.MaNhanHieu" aria-describedby="text">
             </div>
             <div class="mb-4">
                 <label for="sodienthoai" class="form-label fw-bolder">Link Hình Ảnh</label>

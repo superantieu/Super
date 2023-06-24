@@ -40,11 +40,12 @@ namespace Super.Controllers
             return View(data);
 
         }
-
+        
         public IActionResult _partialHang()
         {
             return PartialView();
         }
+       
         public IActionResult _partialDanhSachHang()
         {
             return PartialView();
