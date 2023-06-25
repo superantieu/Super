@@ -40,7 +40,23 @@ namespace Super.Controllers
             return View(data);
 
         }
-        
+        public IActionResult Vukhi(int page = 1)
+        {
+            HomeData data = new HomeData();
+            int limit = 10;
+            int skip = ((page - 1) * limit);
+
+            var item = _context.Hangs.OrderByDescending(k => k.MaHang).Where(c => c.DonGiaHang == "2,000,000")
+                .Skip(skip)
+                .Take(limit)
+                .ToList();
+            data.DSH = item;
+            ViewBag.CurrentPage = page;
+            return View(data);
+
+
+        }
+
         public IActionResult _partialHang()
         {
             return PartialView();

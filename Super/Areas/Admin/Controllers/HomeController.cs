@@ -5,12 +5,15 @@ using System.Diagnostics;
 
 namespace Super.Areas.Admin.Controllers
 {
-    
+    [Area("Admin")]
+    [Route("admin")]
     public class HomeController : Controller
     {
-        [Area("Admin")]
+
+        
         public IActionResult Index()
         {
+            
             return View();
         }
     }

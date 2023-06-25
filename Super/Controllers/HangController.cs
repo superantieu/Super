@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NuGet.Protocol;
+using Super.Areas.Admin.Models;
 using Super.Models;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
@@ -12,11 +13,7 @@ namespace Super.Controllers
         {
             _context = context;
         }
-        public IActionResult Index()
-        {
-            var item = _context.Hangs.ToList();
-            return View(item);
-        }
+      
         public IActionResult innerIndex(int? mahang, string? tenhang, string? dongiaban, string? manhanhieu, string? hinhanh)
         {
             var itemToUpdate = _context.Hangs.FirstOrDefault(x => x.MaHang == mahang);
@@ -31,40 +28,8 @@ namespace Super.Controllers
                 //return RedirectToAction("Index");
             return View(itemToUpdate);
         }
-        public IActionResult Xoa(int? mahang)
-        {
-            var itemToRemove = _context.Hangs.FirstOrDefault(x => x.MaHang == mahang); //returns a single item.
-
-            if (itemToRemove != null)
-            {
-                _context.Hangs.Remove(itemToRemove);
-                _context.SaveChanges();
-            }
-            return Redirect("/Home/Index");
-
-            // Update
-        }
-        public IActionResult CapNhat(int? mahang, string? tenhang, string? dongiaban, string? manhanhieu, string? hinhanh, bool? isUpdate = true)
-        {
-            
-            var itemToUpdate = _context.Hangs.FirstOrDefault(x => x.MaHang == mahang);
-
-            if (!(bool)isUpdate)
-            {
-                return View(itemToUpdate);
-            }
-            else
-            {
-                itemToUpdate.TenHang = tenhang;
-                itemToUpdate.DonGiaHang = dongiaban;
-                itemToUpdate.MaNhanHieu = manhanhieu;
-                itemToUpdate.HinhAnh = hinhanh;
-                _context.Update(itemToUpdate);
-                _context.SaveChanges();
-                return Redirect("/Home/Index");
-            }
-        }
-        public IActionResult Them(int? mahang, string? tenhang, string? dongiaban,string? manhanhieu, string? hinhanh)
+       
+        public IActionResult Them(int? mahang, string? tenhang, string? dongiaban,string? manhanhieu, string? hinhanh, bool? kichhoat)
         {
             if (!String.IsNullOrEmpty(tenhang))
             {
@@ -80,11 +45,7 @@ namespace Super.Controllers
                 _context.SaveChanges();
                 return Redirect("/Home/Index/");
             }
-            else
-            {
-                Hang hang = new Hang();
-                return View(hang);
-            }
+            return View();
 
         }
         public IActionResult Search(string searchData)

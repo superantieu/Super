@@ -18,7 +18,7 @@
                             <a href="" class="category-item__link">Set thời trang</a>
                         </li>
                         <li class="category-item">
-                            <a href="" class="category-item__link">Vũ khí</a>
+                            <a asp-area="" asp-controller="Home" asp-action="Vukhi" class="category-item__link">Vũ khí</a>
                         </li>
                         <li class="category-item">
                             <a href="" class="category-item__link">Giáp</a>
@@ -144,9 +144,7 @@
                         <button class="btn page-item"><a class="btn-previous page-link" href="@Url.Action("Index" , "Home", new { page = ViewBag.CurrentPage + 1})">Next</a></button>
   
                     </div>
-                        <a class="btn btn-them nav-link text-dark" asp-area="" asp-controller="Hang" asp-action="Them">
-                            <span style="color: #fff">Click vào đây để thêm hàng!</span>
-                        </a>
+                        
                 </div>
                           
             </div>  
