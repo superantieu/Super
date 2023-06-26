@@ -24,10 +24,14 @@
              <div class="mb-4">
                 <label for="manhanhieu" class="form-label fw-bolder">Mã nhãn hiệu</label>
                 <input type="text" class="form-control" id="manhanhieu" name="manhanhieu"aria-describedby="text">
+            </div><div class="mb-4" hidden>
+                <label for="imageurl" class="form-label fw-bolder" hidden>Mã nhãn hiệu</label>
+                <input type="text" value="" class="form-control" id="imageurl" name="imageurl" aria-describedby="text" hidden>
             </div>
             <div class="mb-4">
                 <label for="hinhanh" class="form-label fw-bolder">Link Hình Ảnh</label>
-                <input type="file" class="form-control" id="hinhanh" name="hinhanh" aria-describedby="text">
+                <img src="" id="image" width="200" height="200" style="object-fit: cover" />
+                <input type="file" onchange="chooseFile(this)" class="form-control" value="" id="hinhanh" name="hinhanh" aria-describedby="text">
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="kichhoat" name="kichhoat">
@@ -42,3 +46,28 @@
         </form>
     </div>
 </div>
+<script>
+    
+   
+      function chooseFile(fileInput) 
+         {
+             console.log(fileInput.files[0])
+            if (fileInput) 
+            {
+                
+                 var reader = new FileReader();
+                 reader.onload = function (e) {
+                    
+                 $('#image').attr('src', e.target.result)
+                 $('#imageurl').attr('value', e.target.result)
+                 
+                     
+                 }
+                  reader.readAsDataURL(fileInput.files[0]);
+                
+                
+               
+            }
+        }
+   
+</script>

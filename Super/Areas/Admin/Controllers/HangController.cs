@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Super.Models;
+using System.Security.Policy;
 
 namespace Super.Areas.Admin.Controllers
 {
@@ -34,7 +35,7 @@ namespace Super.Areas.Admin.Controllers
             // Update
         }
         [Route("them")]
-        public IActionResult Them(int? mahang, string? tenhang, string? dongiaban, string? manhanhieu, string? hinhanh, bool? kichhoat)
+        public IActionResult Them(int? mahang, string? tenhang, string? dongiaban, string? manhanhieu,string? imageurl ,string? hinhanh, bool? kichhoat)
         {
             if (!String.IsNullOrEmpty(tenhang))
             {
@@ -43,7 +44,9 @@ namespace Super.Areas.Admin.Controllers
                 hang.TenHang = tenhang;
                 hang.DonGiaHang = dongiaban;
                 hang.MaNhanHieu = manhanhieu;
-                hang.HinhAnh = hinhanh;
+                hang.HinhAnh = imageurl;
+               
+                
                 //hang.Filter = tenhang.ToLower() + manhanhieu.ToLower() + A.ghg(tenhang.ToLower());
                 _context.Add(hang);
                 _context.SaveChanges();

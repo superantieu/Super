@@ -5,21 +5,21 @@
 $(document).ready(function () {
     // lưu giá trị search hiện tại
     var currentSearchData = '';
-    
+
     var supcua = $(".supcua");
-    
-    
+
+
     $('#searchInput').on('input', function () {
 
         // lấy value từ input
         var searchData = $(this).val();
         if (searchData === '') {
-           
+
             $('#searchList').empty();
-            
+
             $('#searchList').append(supcua);
-            
-            
+
+
         } else {
 
             // dùng ajax gọi hàm lấy dữ liệu từ controller Search 
@@ -40,7 +40,7 @@ $(document).ready(function () {
                     $.each(searchResults, function (index, result) {
                         console.log(result)
                         var search = ` <div class="supcua col l-2-4 m-4 s-6">
-                                            <a class="product">
+                                            <a class="product" href="/Hang/innerIndex?mahang=${result.maHang}">
                                                 <div class="product-image-01" style="background-image: url(${result.hinhAnh});">
                                                 </div>
                                                  <div class="product-info">
@@ -81,8 +81,8 @@ $(document).ready(function () {
                                 </div>
                             </a>
                                     </div > `
-                        
-                        
+
+
                         $('#searchList').append(search);
                     });
 
@@ -90,6 +90,11 @@ $(document).ready(function () {
             })
         }
 
-    })
+    });
 
-})
+  
+
+
+
+});
+

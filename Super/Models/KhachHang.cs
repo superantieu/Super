@@ -24,4 +24,6 @@ public partial class KhachHang
 
     [InverseProperty("MaKhNavigation")]
     public virtual ICollection<HoaDon> HoaDons { get; set; } = new List<HoaDon>();
+    [InverseProperty("MaKhNavigation")]
+    public virtual ICollection<User> Users { get; set; } = new List<User>();
 }

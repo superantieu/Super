@@ -26,9 +26,14 @@ public partial class Hang
 
     public int? TonKho { get; set; }
 
-    [StringLength(150)]
+    [StringLength(200)]
+    public string? Filter { get; set; }
+
+    [Column(TypeName = "ntext")]
+    public string? Src { get; set; }
+
     public string? HinhAnh { get; set; }
-    public string Filter { get; set; }
+
 
     [InverseProperty("MaHangNavigation")]
     public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; } = new List<ChiTietHoaDon>();
@@ -36,4 +41,5 @@ public partial class Hang
     [ForeignKey("MaNhanHieu")]
     [InverseProperty("Hangs")]
     public virtual NhanHieu? MaNhanHieuNavigation { get; set; }
+
 }

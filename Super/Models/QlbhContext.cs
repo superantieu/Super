@@ -26,6 +26,7 @@ public partial class QlbhContext : DbContext
     public virtual DbSet<NhaCungCap> NhaCungCaps { get; set; }
 
     public virtual DbSet<NhanHieu> NhanHieus { get; set; }
+    public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseSqlServer("name=DB");
@@ -68,9 +69,18 @@ public partial class QlbhContext : DbContext
         {
             entity.HasOne(d => d.MaCungCapNavigation).WithMany(p => p.NhanHieus).HasConstraintName("FK_NhanHieu_NhaCungCap");
         });
+        modelBuilder.Entity<User>(entity =>
+        {
+            entity.Property(e => e.Email).IsFixedLength();
+            entity.Property(e => e.Password).IsFixedLength();
+            entity.Property(e => e.UserName).IsFixedLength();
+
+            
+        });
 
         OnModelCreatingPartial(modelBuilder);
     }
+
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }
