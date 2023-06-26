@@ -1,40 +1,59 @@
 ﻿
 @{
     ViewData["Title"] = "Login";
-    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .btn-login:hover {
+    background: #fff;
+    color: var(--primary-color);
+}
+.form-control {
+    font-size: 1.5rem;
+    height: 45px!important;
 }
 
+</style>
 
                 <main>
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-lg-5">
+                            <div class="col-lg-5" style="margin: 40px;font-size: 1.5rem;">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
-                                    <div class="card-body">
+                                    <div class="card-header" style="color: #fff;background: var(--primary-color);"><h3 class="text-center font-weight-light my-4">Vui lòng nhập Email và Mật khẩu</h3></div>
+                                    <div class="card-body" style="padding: 10px;margin: 10px;">
                                         <form method="post">
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com" />
+                                                <input style="border-color: var(--primary-color);" class="form-control" id="email" name="email" type="email" required="required" placeholder="name@example.com" />
                                                 <label for="inputEmail">Email address</label>
                                             </div>
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="password" name="password" type="password" placeholder="Password" />
+                                                <input style="border-color: var(--primary-color);" class="form-control" id="password" name="password" type="password" required="required" placeholder="Password" />
                                                 <label for="inputPassword">Password</label>
                                             </div>
                                            
-                                            <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
+                                            <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
                                                 
-                                                <button type="submit" id="themgiohang" class="btn btn-primary px-4 py-2">Đăng nhập</button>
+                                                <button style="background: var(--primary-color);
+                                                    color: #fff; margin-top: 15px; border-radius: 8px; height: 40px;" 
+                                                type="submit" id="themgiohang" class="btn btn-login btn-primary px-4 py-2" onclick="Myfunction()"><span>Đăng nhập</span></button>
                                             </div>
                                         </form>
                                     </div>
-                                    
-                                    <div class="card-footer text-center py-3">
-                                        <div class="small"><a href="register.html">Need an account? Sign up!</a></div>
-                                    </div>
+                                    <div style="margin: 20px; color: red">@ViewBag.Message</div>
+
+                                   
                                 </div>
                             </div>
                         </div>
                     </div>
                 </main>
 
+@*<script>
+    var sup = $('#themgiohang');
+    console.log(sup);
+    function Myfunction() {
+        
+        // document.getElementById("demo").innerHTML = "Sai email hoặc mật khẩu";
+    }
+</script>*@

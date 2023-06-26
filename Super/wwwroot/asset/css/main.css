@@ -1523,4 +1523,7 @@ i.product__like-true{
     object-fit: cover;
     height: 500px;
 }
+.btn-login:hover {
+    background: #fff;
+    color: var(--primary-color);
 }

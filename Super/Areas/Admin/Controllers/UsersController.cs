@@ -50,10 +50,11 @@ namespace Super.Areas.Admin.Controllers
                     return RedirectToAction("Index", "Home", new { area = "" });
                 }
             }
+            else if (email != null || password != null) { ViewBag.Message = "Email hoặc mật khẩu không đúng"; }
             else
             {
                 // Đăng nhập thất bại
-                 ViewBag.Message = "Email hoặc mật khẩu không đúng";
+                 ViewBag.Message = "";
                 
                
             }
