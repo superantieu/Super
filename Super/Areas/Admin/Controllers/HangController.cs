@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Super.Models;
-using System.Security.Policy;
+using X.PagedList;
 
 namespace Super.Areas.Admin.Controllers
 {
@@ -15,10 +15,13 @@ namespace Super.Areas.Admin.Controllers
         }
 
         [Route("index")]
-        public IActionResult Index()
+        public IActionResult Index(int page = 1, int pageSize = 10)
         {
-            var item = _context.Hangs.ToList();
-            return View(item);
+            //var supe = new Sup();
+            //var model = supe.ListAllPaging(page, pageSize);
+            var model = _context.Hangs.OrderByDescending(x => x.MaHang).ToPagedList(page, pageSize);
+            //var item = _context.Hangs.ToList();
+            return View(model);
         }
         [Route("xoa")]
         public IActionResult Xoa(int? mahang)

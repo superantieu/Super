@@ -44,6 +44,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Html.Abstractions": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.AspNetCore.Mvc.WebApiCompatShim": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.AspNetCore.Session": {
               "target": "Package",
               "version": "[2.1.1, )"
@@ -71,6 +79,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[7.0.7, )"
+            },
+            "X.PagedList.Mvc.Core": {
+              "target": "Package",
+              "version": "[9.0.0-prerelease, )"
             }
           },
           "imports": [

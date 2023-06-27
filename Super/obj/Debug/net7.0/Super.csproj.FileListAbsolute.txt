@@ -760,3 +760,11 @@ F:\1.Study\C#\26-06-Super\Super\Super\obj\Debug\net7.0\refint\Super.dll
 F:\1.Study\C#\26-06-Super\Super\Super\obj\Debug\net7.0\Super.pdb
 F:\1.Study\C#\26-06-Super\Super\Super\obj\Debug\net7.0\Super.genruntimeconfig.cache
 F:\1.Study\C#\26-06-Super\Super\Super\obj\Debug\net7.0\ref\Super.dll
+F:\1.Study\C#\26-06-Super\Super\Super\obj\Debug\net7.0\Super.MvcApplicationPartsAssemblyInfo.cs
+F:\1.Study\C#\26-06-Super\Super\Super\bin\Debug\net7.0\JetBrains.Annotations.dll
+F:\1.Study\C#\26-06-Super\Super\Super\bin\Debug\net7.0\System.Net.Http.Formatting.dll
+F:\1.Study\C#\26-06-Super\Super\Super\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+F:\1.Study\C#\26-06-Super\Super\Super\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.WebApiCompatShim.dll
+F:\1.Study\C#\26-06-Super\Super\Super\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+F:\1.Study\C#\26-06-Super\Super\Super\bin\Debug\net7.0\X.PagedList.dll
+F:\1.Study\C#\26-06-Super\Super\Super\bin\Debug\net7.0\X.PagedList.Mvc.Core.dll
