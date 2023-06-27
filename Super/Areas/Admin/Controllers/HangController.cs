@@ -35,7 +35,7 @@ namespace Super.Areas.Admin.Controllers
             // Update
         }
         [Route("them")]
-        public IActionResult Them(int? mahang, string? tenhang, string? dongiaban, string? manhanhieu,string? imageurl ,string? hinhanh, bool? kichhoat)
+        public IActionResult Them(int? mahang, string? tenhang, string? dongiaban, string? manhanhieu,string? mota, string? chungloai, string? imageurl ,string? hinhanh, bool? kichhoat)
         {
             if (!String.IsNullOrEmpty(tenhang))
             {
@@ -45,6 +45,8 @@ namespace Super.Areas.Admin.Controllers
                 hang.DonGiaHang = dongiaban;
                 hang.MaNhanHieu = manhanhieu;
                 hang.HinhAnh = imageurl;
+                hang.MoTa = mota;
+                hang.Src = chungloai;
                
                 
                 //hang.Filter = tenhang.ToLower() + manhanhieu.ToLower() + A.ghg(tenhang.ToLower());
@@ -56,7 +58,7 @@ namespace Super.Areas.Admin.Controllers
 
         }
         [Route("cap-nhat")]
-        public IActionResult CapNhat(int? mahang, string? tenhang, string? dongiaban, string? manhanhieu, string? hinhanh, bool? isUpdate = true)
+        public IActionResult CapNhat(int? mahang, string? tenhang, string? dongiaban, string? manhanhieu, string? mota, string? chungloai, string? imageurl, string? hinhanh, bool? isUpdate = true)
         {
 
             var itemToUpdate = _context.Hangs.FirstOrDefault(x => x.MaHang == mahang);
@@ -70,7 +72,9 @@ namespace Super.Areas.Admin.Controllers
                 itemToUpdate.TenHang = tenhang;
                 itemToUpdate.DonGiaHang = dongiaban;
                 itemToUpdate.MaNhanHieu = manhanhieu;
-                itemToUpdate.HinhAnh = hinhanh;
+                itemToUpdate.HinhAnh = imageurl;
+                itemToUpdate.MoTa = mota;
+                itemToUpdate.Src = chungloai;
                 _context.Update(itemToUpdate);
                 _context.SaveChanges();
                 return RedirectToAction("Index", "Hang", new { area = "Admin" });

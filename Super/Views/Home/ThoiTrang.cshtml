@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "ThoiTrang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<partial name="_partialHang" model="@Model.DSH" />
+<span style="
+    display: flex;
+    justify-content: space-evenly;
+    /* gap: 20px; */
+">
+    <button class="btn page-item"><a class="btn-next page-link" href="@Url.Action("ThoiTrang" , "Home", new { page = ViewBag.CurrentPage - 1})">Previous</a></button>
+                        <button class="btn page-item"><a class="btn-previous page-link" href="@Url.Action("ThoiTrang" , "Home", new { page = ViewBag.CurrentPage + 1})">Next</a></button>
+</span>
+
+
+<script>
+    const $ = document.querySelector.bind(document);
+    const $$ = document.querySelectorAll.bind(document);
+    const lists = $$(".category-item__link");
+    const total = lists[0];
+    const ava = lists[1];         
+        total.classList.remove("category-item__link--active");    
+        ava.classList.add("category-item__link--active");
+        
+</script>

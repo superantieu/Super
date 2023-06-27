@@ -48,12 +48,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ1xpbm5lckluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/1.Study/C\#/26-06-Super/Super/Super/Views/Home/Giap.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHaWFwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/1.Study/C\#/26-06-Super/Super/Super/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/1.Study/C\#/26-06-Super/Super/Super/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/1.Study/C\#/26-06-Super/Super/Super/Views/Home/ThoiTrang.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUaG9pVHJhbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/1.Study/C\#/26-06-Super/Super/Super/Views/Home/TrangSuc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmFuZ1N1Yy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/1.Study/C\#/26-06-Super/Super/Super/Views/Home/Vukhi.cshtml]

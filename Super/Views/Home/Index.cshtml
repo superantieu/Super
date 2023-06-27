@@ -5,7 +5,14 @@
 
     <partial name="_partialHang" model="@Model.DSH" />
   
-    
+    <span style="
+    display: flex;
+    justify-content: space-evenly;
+    /* gap: 20px; */
+">
+    <button class="btn page-item"><a class="btn-next page-link" href="@Url.Action("Index" , "Home", new { page = ViewBag.CurrentPage - 1})">Previous</a></button>
+    <button class="btn page-item"><a class="btn-previous page-link" href="@Url.Action("Index" , "Home", new { page = ViewBag.CurrentPage + 1})">Next</a></button>
+</span>
         
     
 

@@ -40,13 +40,61 @@ namespace Super.Controllers
             return View(data);
 
         }
+        public IActionResult ThoiTrang(int page = 1)
+        {
+            HomeData data = new HomeData();
+            int limit = 10;
+            int skip = ((page - 1) * limit);
+
+            var item = _context.Hangs.OrderByDescending(k => k.MaHang).Where(c => c.Src == "Ava")
+                .Skip(skip)
+                .Take(limit)
+                .ToList();
+            data.DSH = item;
+            ViewBag.CurrentPage = page;
+            return View(data);
+
+
+        }
         public IActionResult Vukhi(int page = 1)
         {
             HomeData data = new HomeData();
             int limit = 10;
             int skip = ((page - 1) * limit);
 
-            var item = _context.Hangs.OrderByDescending(k => k.MaHang).Where(c => c.DonGiaHang == "2,000,000")
+            var item = _context.Hangs.OrderByDescending(k => k.MaHang).Where(c => c.Src == "Weapon")
+                .Skip(skip)
+                .Take(limit)
+                .ToList();
+            data.DSH = item;
+            ViewBag.CurrentPage = page;
+            return View(data);
+
+
+        }
+        public IActionResult Giap(int page = 1)
+        {
+            HomeData data = new HomeData();
+            int limit = 10;
+            int skip = ((page - 1) * limit);
+
+            var item = _context.Hangs.OrderByDescending(k => k.MaHang).Where(c => c.Src == "Protector")
+                .Skip(skip)
+                .Take(limit)
+                .ToList();
+            data.DSH = item;
+            ViewBag.CurrentPage = page;
+            return View(data);
+
+
+        }
+        public IActionResult TrangSuc(int page = 1)
+        {
+            HomeData data = new HomeData();
+            int limit = 10;
+            int skip = ((page - 1) * limit);
+
+            var item = _context.Hangs.OrderByDescending(k => k.MaHang).Where(c => c.Src == "Accessory")
                 .Skip(skip)
                 .Take(limit)
                 .ToList();
@@ -61,12 +109,12 @@ namespace Super.Controllers
         {
             return PartialView();
         }
-       
+
         public IActionResult _partialDanhSachHang()
         {
             return PartialView();
         }
-            
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

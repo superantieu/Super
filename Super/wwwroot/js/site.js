@@ -3,6 +3,7 @@
 
 // Write your JavaScript code.
 $(document).ready(function () {
+    console.log(1);
     // lưu giá trị search hiện tại
     var currentSearchData = '';
 

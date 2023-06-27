@@ -12,19 +12,19 @@
                     </h3>
                     <ul class="category-list">
                         <li class="category-item">
-                            <a href="" class="category-item__link category-item__link--active">Sản phẩm</a>
+                            <a asp-area="" asp-controller="Home" asp-action="Index" class="category-item__link category-item__link--active">Sản phẩm</a>
                         </li>
                         <li class="category-item">
-                            <a href="" class="category-item__link">Set thời trang</a>
+                            <a asp-area="" asp-controller="Home" asp-action="ThoiTrang" class="category-item__link">Set thời trang</a>
                         </li>
                         <li class="category-item">
                             <a asp-area="" asp-controller="Home" asp-action="Vukhi" class="category-item__link">Vũ khí</a>
                         </li>
                         <li class="category-item">
-                            <a href="" class="category-item__link">Giáp</a>
+                            <a asp-area="" asp-controller="Home" asp-action="Giap" class="category-item__link">Giáp</a>
                         </li>
                         <li class="category-item">
-                            <a href="" class="category-item__link">Trang sức</a>
+                            <a asp-area="" asp-controller="Home" asp-action="TrangSuc" class="category-item__link">Trang sức</a>
                         </li>
                     </ul>
                 </nav>
@@ -140,8 +140,7 @@
                     </div>
                     <div class="page-button" aria-label="Page navigation example">
   
-                        <button class="btn page-item"><a class="btn-next page-link" href="@Url.Action("Index" , "Home", new { page = ViewBag.CurrentPage - 1})">Previous</a></button>
-                        <button class="btn page-item"><a class="btn-previous page-link" href="@Url.Action("Index" , "Home", new { page = ViewBag.CurrentPage + 1})">Next</a></button>
+                        
   
                     </div>
                         

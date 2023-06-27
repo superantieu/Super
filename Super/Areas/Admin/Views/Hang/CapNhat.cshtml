@@ -25,9 +25,22 @@
                 <label for="manhanhieu" class="form-label fw-bolder">Mã Nhãn Hiệu</label>
                 <input type="text" class="form-control" id="manhanhieu" name="manhanhieu" value="@Model.MaNhanHieu" aria-describedby="text">
             </div>
+              <div class="mb-4">
+                <label for="mota" class="form-label fw-bolder">Mô tả</label>
+                <input type="text" class="form-control" id="mota" name="mota" value="@Model.MoTa" aria-describedby="text">
+            </div>   
             <div class="mb-4">
-                <label for="sodienthoai" class="form-label fw-bolder">Link Hình Ảnh</label>
-                <input type="text" class="form-control" id="hinhanh" name="hinhanh" value="@Model.HinhAnh" aria-describedby="text">
+                <label for="chungloai" class="form-label fw-bolder">Chủng loại</label>
+                <input type="text" class="form-control" id="chungloai" name="chungloai" value="@Model.Src" aria-describedby="text">
+            </div>
+           <div class="mb-4" hidden>
+                <label for="imageurl" class="form-label fw-bolder" hidden>Mã nhãn hiệu</label>
+                <input type="text" value="" class="form-control" id="imageurl" name="imageurl" aria-describedby="text" hidden>
+            </div>
+            <div class="mb-4">
+                <label for="hinhanh" class="form-label fw-bolder">Link Hình Ảnh</label>
+                <img src="" id="image" width="200" height="200" style="object-fit: cover" />
+                <input type="file" onchange="chooseFile(this)" class="form-control" value="@Model.HinhAnh" id="hinhanh" name="hinhanh" aria-describedby="text">
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" @*checked="@((bool)Model.IsActive)"*@ name="kichhoat" id="kichhoat">
@@ -43,3 +56,28 @@
     </div>
 </div>
 
+<script>
+    
+   
+      function chooseFile(fileInput) 
+         {
+             console.log(fileInput.files[0])
+            if (fileInput) 
+            {
+                
+                 var reader = new FileReader();
+                 reader.onload = function (e) {
+                    
+                 $('#image').attr('src', e.target.result)
+                 $('#imageurl').attr('value', e.target.result)
+                 
+                     
+                 }
+                  reader.readAsDataURL(fileInput.files[0]);
+                
+                
+               
+            }
+        }
+   
+</script>
