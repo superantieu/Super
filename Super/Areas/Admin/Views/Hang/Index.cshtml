@@ -34,6 +34,12 @@
         color: #fff;
         border-radius: 5px;
     }
+    img {
+    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    }
 </style>
 
 
@@ -46,7 +52,12 @@
                 <th scope="col">Mã hàng</th>
                 <th scope="col">Tên hàng</th>
                 <th scope="col">Đơn giá hàng</th>
+                <th scope="col">Mã nhãn hiệu</th>
+                <th scope="col">Mô tả</th>
                 <th scope="col">Link hình ảnh</th>
+                <th scope="col">Trạng thái</th>
+                <th scope="col">Mã khuyến mại</th>
+                <th scope="col">Chủng loại</th>
                 <th scope="col">Thao tác</th>
             </tr>
         </thead>
@@ -58,17 +69,23 @@
                 {
                     i++;
                     <tr>
-                        <td class="text-center">@i</td>
+                        <td class="text-center"><div>@i</div></td>
                         <td class="text-center">@item.MaHang</td>
                         <td class="text-center">@item.TenHang</td>
                         <td class="text-center">@item.DonGiaHang</td>
-                        <td class="text-center" style="width: 300px;text-overflow: ellipsis;overflow: hidden;display: inline-block;transform: translateY(1px);">@item.HinhAnh</td>
-                                                    
-                        @*  <td class="text-center @((bool)item.IsActive ? "text-success" : "text-danger")">
+                        <td class="text-center">@item.MaNhanHieu</td>
+                        <td class="text-center">@item.MoTa</td>
+                        <td class="text-center" ><img src="@item.HinhAnh" /></td>
+                        @*<td class="text-center">@item.IsActive</td>*@
+                           <td class="text-center @((bool)item.IsActive ? "text-success" : "text-danger")">
                 @((bool)item.IsActive ? "Kích hoạt" : "Tạm khóa")
-                </td>*@
+                </td>
+                        <td class="text-center">@item.Url</td>
+                        <td class="text-center">@item.Src</td>
+                                                    
+                       
                         <td class="text-center">
-                            <a class="px-2" href="@Url.Action("Xoa", "Hang", new { mahang = item.MaHang })">
+                            <a class="px-2" href="@Url.Action("Xoa", "Hang", new { mahang = item.MaHang, isActive = item.IsActive })">
                                 <i class="fa fa-trash text-danger" aria-hidden="true"></i>
                             </a>
                             <a class="px-2" href="@Url.Action("CapNhat", "Hang", new { area = "Admin", mahang = item.MaHang, isUpdate = false})">

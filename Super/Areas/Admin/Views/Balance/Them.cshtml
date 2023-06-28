@@ -1,0 +1,53 @@
+﻿@model Super.Models.Balance
+@{
+    ViewData["Title"] = "Them";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    option {
+        font-size: 1.5rem;
+    }
+</style>
+<div class="d-flex justify-content-center">
+    <div class="updatedata col-6 px-5 pt-5 border rounded-3 shadow-lg" style="margin-top: 100px">
+        <h2 class="text-center fw-bold pb-4">Thêm thông tin khuyến mại</h2>
+        <hr />
+        <form action="/khuyenmai/them" method="post">
+            <div class="mb-4">
+                <label for="makm" class="form-label fw-bolder">Mã khuyến mại</label>
+                <input type="text" class="form-control"  id="makm" name="makm" aria-describedby="text">
+            </div>
+            <div class="mb-4">
+                <label for="khuyenmai" class="form-label fw-bolder">Giá trị khuyến mại</label>
+                <input type="text" class="form-control" id="khuyenmai" name="khuyenmai" aria-describedby="text">
+            </div>
+            <div class="mb-4">
+                <label for="moigoi" class="form-label fw-bolder">Lời mời gọi</label>
+                <input type="text" class="form-control" id="moigoi" name="moigoi" aria-describedby="text">
+            </div>
+             @*  <div class="mb-4">
+                <label for="trangthai" class="form-label fw-bolder">Lời mời gọi</label>
+                <input type="text" class="form-control" id="trangthai" name="trangthai" aria-describedby="text">
+            </div>*@
+              <div class="mb-4">
+                <label for="trangthai" class="form-label fw-bolder">Trạng thái</label>
+                <select type="text" class="form-control" id="trangthai" name="trangthai" aria-describedby="text">
+                     <option selected value = "True">Kích hoạt</option>
+                    <option value = "False">Tạm khóa</option>
+                </select>
+            </div>
+            
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="kichhoat" name="kichhoat">
+                <label class="form-check-label" for="kichhoat">
+                    Kích hoạt
+                </label>
+            </div>
+            <hr />
+            <div class="d-flex align-items-center justify-content-center my-5 gap-5">
+                <button type="submit" id="themgiohang" class="btn btn-primary px-4 py-2">Thêm thông tin khuyến mại</button>
+            </div>
+        </form>
+    </div>
+</div>
+

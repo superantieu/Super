@@ -33,7 +33,7 @@ namespace Super.Controllers
         {
             HomeData data = new HomeData();
              
-            var itema = _context.Balances.OrderByDescending(k => k.Url).Where(c => c.Url == url).ToList();
+            var itema = _context.Balances.OrderByDescending(k => k.Url).Where(c => c.Url == url && c.IsActive == true).ToList();
             var item = _context.Hangs.OrderByDescending(k => k.MaHang).Where(c => c.MaHang == mahang).ToList();
             data.KMDB = itema;
             data.DSH = item;

@@ -16,6 +16,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = F:\1.Study\C#\28-06-Super\Super\Super
 build_property._RazorSourceGeneratorDebug = 
 
+[F:/1.Study/C\#/28-06-Super/Super/Super/Areas/Admin/Views/Balance/CapNhat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmFsYW5jZVxDYXBOaGF0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/1.Study/C\#/28-06-Super/Super/Super/Areas/Admin/Views/Balance/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmFsYW5jZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/1.Study/C\#/28-06-Super/Super/Super/Areas/Admin/Views/Balance/Them.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmFsYW5jZVxUaGVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/1.Study/C\#/28-06-Super/Super/Super/Areas/Admin/Views/Hang/CapNhat.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSGFuZ1xDYXBOaGF0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

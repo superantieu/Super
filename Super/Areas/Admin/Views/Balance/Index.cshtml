@@ -1,0 +1,101 @@
+﻿@model X.PagedList.IPagedList<Super.Models.Balance>
+@using X.PagedList.Mvc.Core;
+@using X.PagedList.Mvc;
+
+@using System.Web;
+@using System.Net;
+@using System.Text.Encodings.Web;
+@using Microsoft.AspNetCore.Html;
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .next-pre {
+        margin-top: 35px;
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .pagination > li {
+        font-size: 1.1rem;
+        padding: 3px 11px;
+        border: 1px solid #ccc;
+        background-color: #fb5533;
+        color: #fff;
+        border-radius: 5px;
+    }
+    img {
+    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    }
+</style>
+
+
+<div class="quanly hide-on-mobile col l-10 m-12 s-12" style="margin: 20px auto;">
+    <h1 class="quanlyds">Quản lý danh sách khuyến mại</h1>
+    <table class="table table-striped overflow-scroll">
+        <thead>
+            <tr class="text-center">
+                <th scope="col">STT</th>
+                <th scope="col">Mã khuyến mại</th>
+                <th scope="col">Giá trị khuyến mại</th>
+                <th scope="col">Lời mời gọi</th>
+                <th scope="col">Trạng thái</th>
+                <th scope="col">Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null)
+            {
+                int i = 0;
+                foreach (var item in Model)
+                {
+                    i++;
+                    <tr>
+                        <td class="text-center"><div>@i</div></td>
+                        <td class="text-center">@item.Url</td>
+                        <td class="text-center">@item.Km</td>
+                        <td class="text-center">@item.Details</td>                                             
+                       @* <td class="text-center">@item.IsActive</td>   *@                                          
+                          <td class="text-center @((bool)item.IsActive ? "text-success" : "text-danger")">
+                @((bool)item.IsActive ? "kích hoạt" : "tạm khóa")
+                </td>
+                        <td class="text-center">
+                            <a class="px-2" href="@Url.Action("Xoa", "Balance", new { makm = item.Url, isActive = item.IsActive })">
+                                <i class="fa fa-trash text-danger" aria-hidden="true"></i>
+                            </a>
+                            <a class="px-2" href="@Url.Action("CapNhat", "Balance", new { area = "Admin", makm = item.Url, isUpdate = false})">
+                                <i class="fa fa-wrench" aria-hidden="true"></i>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <caption>
+                    Không có dữ liệu
+                </caption>
+            }
+        </tbody>
+    </table>
+    <div class="next-pre">@Html.PagedListPager(Model, page => Url.Action("Index","Balance", new { page }))</div>
+  
+    <a class="btn btn-them nav-link text-dark" style="background: #ccc" asp-area="Admin" asp-controller="Balance" asp-action="Them">
+        <span style="color: #fff">Click vào đây để thêm khuyến mại!</span>
+    </a>
+</div>
+   
+
+

@@ -31,7 +31,7 @@ namespace Super.Controllers
             int limit = 10;
             int skip = ((page - 1) * limit);
 
-            var item = _context.Hangs.OrderByDescending(k => k.MaHang)
+            var item = _context.Hangs.OrderByDescending(k => k.MaHang).Where(c => c.IsActive == true)
                 .Skip(skip)
                 .Take(limit)
                 .ToList();
@@ -46,7 +46,7 @@ namespace Super.Controllers
             int limit = 10;
             int skip = ((page - 1) * limit);
 
-            var item = _context.Hangs.OrderByDescending(k => k.MaHang).Where(c => c.Src == "Ava")
+            var item = _context.Hangs.OrderByDescending(k => k.MaHang).Where(c => c.Src == "Ava" && c.IsActive == true)
                 .Skip(skip)
                 .Take(limit)
                 .ToList();
@@ -62,7 +62,7 @@ namespace Super.Controllers
             int limit = 10;
             int skip = ((page - 1) * limit);
 
-            var item = _context.Hangs.OrderByDescending(k => k.MaHang).Where(c => c.Src == "Weapon")
+            var item = _context.Hangs.OrderByDescending(k => k.MaHang).Where(c => c.Src == "Weapon" && c.IsActive == true)
                 .Skip(skip)
                 .Take(limit)
                 .ToList();
@@ -78,7 +78,7 @@ namespace Super.Controllers
             int limit = 10;
             int skip = ((page - 1) * limit);
 
-            var item = _context.Hangs.OrderByDescending(k => k.MaHang).Where(c => c.Src == "Protector")
+            var item = _context.Hangs.OrderByDescending(k => k.MaHang).Where(c => c.Src == "Protector" && c.IsActive == true)
                 .Skip(skip)
                 .Take(limit)
                 .ToList();
@@ -94,7 +94,7 @@ namespace Super.Controllers
             int limit = 10;
             int skip = ((page - 1) * limit);
 
-            var item = _context.Hangs.OrderByDescending(k => k.MaHang).Where(c => c.Src == "Accessory")
+            var item = _context.Hangs.OrderByDescending(k => k.MaHang).Where(c => c.Src == "Accessory" && c.IsActive == true)
                 .Skip(skip)
                 .Take(limit)
                 .ToList();

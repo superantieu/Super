@@ -1,0 +1,36 @@
+﻿@model Super.Models.Balance
+@{
+    ViewData["Title"] = "CapNhat";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="d-flex justify-content-center">
+    <div class="updatedata col-6 px-5 pt-5 border rounded-3 shadow-lg" style="margin-top: 100px">
+        <h2 class="text-center fw-bold pb-4">Chỉnh sửa thông tin khuyến mại</h2>
+        <hr />
+        <form action="/khuyenmai/cap-nhat" method="post">
+            <div class="mb-4">
+                <label for="makm" class="form-label fw-bolder">Mã khuyến mại</label>
+                <input type="text" class="form-control" id="makm" name="makm" value="@Model.Url" aria-describedby="text">
+            </div><div class="mb-4">
+                <label for="khuyenmai" class="form-label fw-bolder">Tên Hàng</label>
+                <input type="text" class="form-control" id="khuyenmai" name="khuyenmai" value="@Model.Km" aria-describedby="text">
+            </div>
+            <div class="mb-4">
+                <label for="moigoi" class="form-label fw-bolder">Lời mời gọi</label>
+                <input type="text" class="form-control" id="moigoi" name="moigoi" value="@Model.Details" aria-describedby="text">
+            </div>
+      
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" @*checked="@((bool)Model.IsActive)"*@ name="kichhoat" id="kichhoat">
+                <label class="form-check-label" for="kichhoat">
+                    Kích hoạt
+                </label>
+            </div>
+            <hr />
+            <div class="d-flex align-items-center justify-content-center my-5 gap-5">
+                <button type="submit" id="themgiohang" class="btn btn-primary px-4 py-2" >Cập nhật</button>
+            </div>
+        </form>
+    </div>
+</div>

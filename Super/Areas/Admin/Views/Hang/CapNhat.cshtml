@@ -7,7 +7,7 @@
 
 <div class="d-flex justify-content-center">
     <div class="updatedata col-6 px-5 pt-5 border rounded-3 shadow-lg" style="margin-top: 100px">
-        <h2 class="text-center fw-bold pb-4">Edit tin khoa</h2>
+        <h2 class="text-center fw-bold pb-4">Chỉnh sửa thông tin sản phẩm</h2>
         <hr />
         <form action="/hang/cap-nhat" method="post">
             <div class="mb-4">
@@ -33,6 +33,10 @@
                 <label for="chungloai" class="form-label fw-bolder">Chủng loại</label>
                 <input type="text" class="form-control" id="chungloai" name="chungloai" value="@Model.Src" aria-describedby="text">
             </div>
+             <div class="mb-4">
+                <label for="khuyenmai" class="form-label fw-bolder">Mã khuyến mại</label>
+                <input type="text" class="form-control" id="khuyenmai" name="khuyenmai" value="@Model.Url" aria-describedby="text">
+            </div>
            <div class="mb-4" hidden>
                 <label for="imageurl" class="form-label fw-bolder" hidden>Mã nhãn hiệu</label>
                 <input type="text" value="" class="form-control" id="imageurl" name="imageurl" aria-describedby="text" hidden>
@@ -50,7 +54,7 @@
             </div>
             <hr />
             <div class="d-flex align-items-center justify-content-center my-5 gap-5">
-                <button type="submit" id="themgiohang" class="btn btn-primary px-4 py-2" >Edit</button>
+                <button type="submit" id="themgiohang" class="btn btn-primary px-4 py-2" >Cập nhật</button>
             </div>
         </form>
     </div>
