@@ -93,7 +93,8 @@
                                             foreach (var item in Model)
                                             {  i++;
                                                     <div class="supcua col l-2-4 m-4 s-6" style="margin: 0rem !important">
-                                                        <a class="product" href="@Url.Action("innerIndex", "Hang", new { mahang = item.MaHang })">
+                                                       @* <a class="product" href="@Url.Action("innerIndex", "Hang", new { mahang = item.MaHang, url = item.Url })">*@
+                                                            <a class="product" href="@Url.Action("Super", "Hang", new { mahang = item.MaHang, url = item.Url })">
                                                             <div class="product-image-01" style="background-image: url(@item.HinhAnh);">
                                                             </div>
                                                             <div class="product-info">

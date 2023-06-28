@@ -19,6 +19,10 @@ public partial class NhanHieu
     [StringLength(50)]
     public string? MaCungCap { get; set; }
 
+    public string? Filter { get; set; }
+
+    public bool? IsActive { get; set; }
+
     [InverseProperty("MaNhanHieuNavigation")]
     public virtual ICollection<Hang> Hangs { get; set; } = new List<Hang>();
 

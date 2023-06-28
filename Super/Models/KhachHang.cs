@@ -22,8 +22,13 @@ public partial class KhachHang
     [StringLength(50)]
     public string? DienThoai { get; set; }
 
+    public string? Filter { get; set; }
+
+    public bool? IsActive { get; set; }
+
     [InverseProperty("MaKhNavigation")]
     public virtual ICollection<HoaDon> HoaDons { get; set; } = new List<HoaDon>();
+
     [InverseProperty("MaKhNavigation")]
     public virtual ICollection<User> Users { get; set; } = new List<User>();
 }

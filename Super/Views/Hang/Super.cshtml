@@ -1,0 +1,9 @@
+﻿@model Super.Models.HomeData
+@{
+    ViewData["Title"] = "Super";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+ <partial name="_partialChiTietHang" model="@Model.DSH" />
+ <partial name="_partialKhuyenMai" model="@Model.KMDB" />
+

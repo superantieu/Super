@@ -1,0 +1,48 @@
+﻿
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<style>
+    .container {
+        padding-bottom: 20px;
+    }
+    .quanly {
+        border: none;
+       
+        margin: 20px 50% 20px 5%;
+    }
+    .text-center {
+        margin: 15px;
+           background: linear-gradient(187deg, var(--primary-color), transparent);
+    color: #fff;
+    border-radius: 99px;    font-size: 2rem;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+</style>
+<div class="quanly hide-on-mobile col l-10 m-12 s-12">
+    
+            @if (Model != null)
+            {
+                int i = 0;
+                foreach (var item in Model)
+                {
+                    i++;
+                    
+                       
+                        <div class="text-center">@item.Km</div>
+                        <div class="text-center">@item.Details</div>
+                        
+                    
+                }
+            }
+            else
+            {
+                <caption>
+                    Không có dữ liệu
+                </caption>
+            }
+     </div>

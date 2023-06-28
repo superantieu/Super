@@ -1,0 +1,51 @@
+﻿
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+            @if (Model != null)
+            {
+                int i = 0;
+                foreach (var item in Model)
+                {
+                    <div class="innerProduct">
+                <div class="product-img">
+                    <img class="inner-img" src="@item.HinhAnh">
+                    <h2 class="inner-desc product-info__heading">@item.MoTa</h2>
+                    
+                </div>
+           
+                <div class="product-info" style="width: 50%;">
+                    <h1 class="inner-heading product-info__heading">@item.TenHang</h1>
+                    <span class="inner-hagstag product-info__hastag">#@item.MaNhanHieu</span>
+                    <div class="inner-price product-info__price">
+                        <span class="inner-infor__price product-info__price-new">Giá tiền: @item.DonGiaHang đ</span>
+                    </div>
+
+                    <form action="/HoaDon/CapNhat" method="post">
+                        <div class="mb-4">
+                            <label for="soluong" class="inner-label form-label fw-bolder">Số lượng</label>
+                            <input type="number" min="1" class="inner-input form-control" id="soluong" name="soluong" aria-describedby="text">
+                        </div>
+                        <hr class="inner-hr"/>
+                        <div class="d-flex align-items-center justify-content-center my-5 gap-5">
+                            <button type="submit" id="themgiohang" class="inner-btn btn btn-primary px-4 py-2" >Thêm vào giỏ hàng</button>
+                        </div>
+                    </form>
+
+
+
+
+               
+                </div>
+         
+
+          </div>
+                }
+            }
+            else
+            {
+                <caption>
+                    Không có dữ liệu
+                </caption>
+            }

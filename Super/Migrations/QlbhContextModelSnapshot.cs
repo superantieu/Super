@@ -17,10 +17,33 @@ namespace Super.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.7")
+                .HasAnnotation("ProductVersion", "7.0.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("Super.Models.Balance", b =>
+                {
+                    b.Property<string>("Url")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Details")
+                        .HasColumnType("ntext");
+
+                   
+
+                    b.Property<string>("Km")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("KM");
+
+                    b.HasKey("Url");
+
+                    
+
+                    b.ToTable("Balance");
+                });
 
             modelBuilder.Entity("Super.Models.ChiTietHoaDon", b =>
                 {
@@ -74,15 +97,23 @@ namespace Super.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<string>("Filter")
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasComputedColumnSql("LOWER([MaKhoa] + [TenKhoa] + [SDT])");
+
                     b.Property<string>("HinhAnh")
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MaNhanHieu")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("MoTa")
+                        .HasColumnType("ntext");
+
+                    b.Property<string>("Src")
                         .HasColumnType("ntext");
 
                     b.Property<string>("TenHang")
@@ -92,9 +123,14 @@ namespace Super.Migrations
                     b.Property<int?>("TonKho")
                         .HasColumnType("int");
 
+                    b.Property<string>("Url")
+                        .HasColumnType("nvarchar(50)");
+
                     b.HasKey("MaHang");
 
                     b.HasIndex("MaNhanHieu");
+
+                    b.HasIndex("Url");
 
                     b.ToTable("Hang");
                 });
@@ -198,6 +234,48 @@ namespace Super.Migrations
                     b.ToTable("NhanHieu");
                 });
 
+            modelBuilder.Entity("Super.Models.User", b =>
+                {
+                    b.Property<int>("UserId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("UserID");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(100)
+                        .HasColumnType("nchar(100)")
+                        .IsFixedLength();
+
+                    b.Property<int?>("MaKh")
+                        .HasColumnType("int")
+                        .HasColumnName("MaKH");
+
+                    b.Property<string>("Password")
+                        .HasMaxLength(100)
+                        .HasColumnType("nchar(100)")
+                        .IsFixedLength();
+
+                    b.Property<int?>("RoleId")
+                        .HasColumnType("int")
+                        .HasColumnName("RoleID");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nchar(100)")
+                        .IsFixedLength();
+
+                    b.HasKey("UserId");
+
+                    b.HasIndex("MaKh");
+
+                    b.ToTable("Users");
+                });
+
+       
+
             modelBuilder.Entity("Super.Models.ChiTietHoaDon", b =>
                 {
                     b.HasOne("Super.Models.Hang", "MaHangNavigation")
@@ -224,7 +302,14 @@ namespace Super.Migrations
                         .HasForeignKey("MaNhanHieu")
                         .HasConstraintName("FK_Hang_NhanHieu");
 
+                    b.HasOne("Super.Models.Balance", "UrlNavigation")
+                        .WithMany("Hangs")
+                        .HasForeignKey("Url")
+                        .HasConstraintName("FK_Hang_Balance");
+
                     b.Navigation("MaNhanHieuNavigation");
+
+                    b.Navigation("UrlNavigation");
                 });
 
             modelBuilder.Entity("Super.Models.HoaDon", b =>
@@ -247,9 +332,25 @@ namespace Super.Migrations
                     b.Navigation("MaCungCapNavigation");
                 });
 
+            modelBuilder.Entity("Super.Models.User", b =>
+                {
+                    b.HasOne("Super.Models.KhachHang", "MaKhNavigation")
+                        .WithMany("Users")
+                        .HasForeignKey("MaKh");
+
+                    b.Navigation("MaKhNavigation");
+                });
+
+            modelBuilder.Entity("Super.Models.Balance", b =>
+                {
+                    b.Navigation("Hangs");
+                });
+
             modelBuilder.Entity("Super.Models.Hang", b =>
                 {
                     b.Navigation("ChiTietHoaDons");
+
+                    b.Navigation("KMDB");
                 });
 
             modelBuilder.Entity("Super.Models.HoaDon", b =>
@@ -260,6 +361,8 @@ namespace Super.Migrations
             modelBuilder.Entity("Super.Models.KhachHang", b =>
                 {
                     b.Navigation("HoaDons");
+
+                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("Super.Models.NhaCungCap", b =>

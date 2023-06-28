@@ -114,6 +114,14 @@ namespace Super.Controllers
         {
             return PartialView();
         }
+        public IActionResult _partialKhuyenMai()
+        {
+            return PartialView();
+        }
+        public IActionResult _partialChitiethang()
+        {
+            return PartialView();
+        }
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

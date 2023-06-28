@@ -1,11 +1,15 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
 namespace Super.Models;
 
 [Table("Hang")]
 public partial class Hang
 {
+   
     [Key]
     public int MaHang { get; set; }
 
@@ -23,14 +27,18 @@ public partial class Hang
 
     public int? TonKho { get; set; }
 
+    public string? HinhAnh { get; set; }
+
     [StringLength(200)]
     public string? Filter { get; set; }
 
-    [Column(TypeName = "ntext")]
+    public bool? IsActive { get; set; }
+
+    [StringLength(50)]
+    public string? Url { get; set; }
+
+    [StringLength(50)]
     public string? Src { get; set; }
-
-    public string? HinhAnh { get; set; }
-
 
     [InverseProperty("MaHangNavigation")]
     public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; } = new List<ChiTietHoaDon>();
@@ -39,4 +47,7 @@ public partial class Hang
     [InverseProperty("Hangs")]
     public virtual NhanHieu? MaNhanHieuNavigation { get; set; }
 
+    [ForeignKey("Url")]
+    [InverseProperty("Hangs")]
+    public virtual Balance? UrlNavigation { get; set; }
 }

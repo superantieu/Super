@@ -14,21 +14,53 @@ namespace Super.Controllers
             _context = context;
         }
       
-        public IActionResult innerIndex(int? mahang, string? tenhang, string? dongiaban, string? manhanhieu, string? hinhanh)
+        public IActionResult innerIndex(int? mahang, string? tenhang, string? dongiaban, string? manhanhieu,string? url, string? hinhanh)
+        
         {
-            var itemToUpdate = _context.Hangs.FirstOrDefault(x => x.MaHang == mahang);
+       
 
-         
-                //itemToUpdate.TenHang = tenhang;
-                //itemToUpdate.DonGiaHang = dongiaban;
-                //itemToUpdate.MaNhanHieu = manhanhieu;
-                //itemToUpdate.HinhAnh = hinhanh;
-                //_context.Update(itemToUpdate);
-                //_context.SaveChanges();
-                //return RedirectToAction("Index");
+            // return View(data);
+
+
+            var itemToUpdate = _context.Hangs.FirstOrDefault(x => x.MaHang == mahang);
+           
+
             return View(itemToUpdate);
         }
-       
+     
+           public IActionResult Super(int? mahang, string? tenhang, string? dongiaban, string? manhanhieu,string? url, string? hinhanh)
+        
+        {
+            HomeData data = new HomeData();
+             
+            var itema = _context.Balances.OrderByDescending(k => k.Url).Where(c => c.Url == url).ToList();
+            var item = _context.Hangs.OrderByDescending(k => k.MaHang).Where(c => c.MaHang == mahang).ToList();
+            data.KMDB = itema;
+            data.DSH = item;
+
+
+            // return View(data);
+
+
+            
+           
+
+            return View(data);
+        }
+     
+
+     
+        public IActionResult _partialKhuyenMai()
+        {
+            
+            return PartialView();
+        }
+        public IActionResult _partialChiTietHang()
+        {
+            return PartialView();
+        }
+
+
         public IActionResult Them(int? mahang, string? tenhang, string? dongiaban,string? manhanhieu, string? hinhanh, bool? kichhoat)
         {
             if (!String.IsNullOrEmpty(tenhang))

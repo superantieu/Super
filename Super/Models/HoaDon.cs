@@ -19,6 +19,10 @@ public partial class HoaDon
     [Column("MaKH")]
     public int? MaKh { get; set; }
 
+    public string? Filter { get; set; }
+
+    public bool? IsActive { get; set; }
+
     [InverseProperty("MaHdNavigation")]
     public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; } = new List<ChiTietHoaDon>();
 

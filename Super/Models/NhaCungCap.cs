@@ -25,6 +25,10 @@ public partial class NhaCungCap
     [StringLength(50)]
     public string? Email { get; set; }
 
+    public string? Filter { get; set; }
+
+    public bool? IsActive { get; set; }
+
     [InverseProperty("MaCungCapNavigation")]
     public virtual ICollection<NhanHieu> NhanHieus { get; set; } = new List<NhanHieu>();
 }
