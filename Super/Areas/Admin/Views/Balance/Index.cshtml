@@ -73,7 +73,7 @@
                 </td>
                         <td class="text-center">
                             <a class="px-2" href="@Url.Action("Xoa", "Balance", new { makm = item.Url, isActive = item.IsActive })">
-                                <i class="fa fa-trash text-danger" aria-hidden="true"></i>
+                                <i class="fa @((bool)item.IsActive ? "text-danger"  : "text-success") @((bool)item.IsActive ? "fa-trash" :  "fa-recycle")" aria-hidden="true"></i>
                             </a>
                             <a class="px-2" href="@Url.Action("CapNhat", "Balance", new { area = "Admin", makm = item.Url, isUpdate = false})">
                                 <i class="fa fa-wrench" aria-hidden="true"></i>

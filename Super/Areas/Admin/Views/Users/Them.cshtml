@@ -1,0 +1,56 @@
+﻿@model Super.Models.User
+@{
+    ViewData["Title"] = "Them";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    option {
+        font-size: 1.5rem;
+    }
+</style>
+<div class="d-flex justify-content-center">
+    <div class="updatedata col-6 px-5 pt-5 border rounded-3 shadow-lg" style="margin-top: 100px">
+        <h2 class="text-center fw-bold pb-4">Thêm thông tin tài khoản</h2>
+        <hr />
+        <form action="/users/them" method="post">
+            <div class="mb-4">
+                <label for="username" class="form-label fw-bolder">User Name</label>
+                <input type="text" class="form-control"  id="username" name="username" aria-describedby="text">
+            </div>
+            <div class="mb-4">
+                <label for="roleid" class="form-label fw-bolder">Phân quyền</label>
+                 <select type="text" class="form-control" id="roleid" name="roleid" aria-describedby="text">
+                     <option selected value = "1">Admin</option>
+                    <option value = "2">Client</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label for="email" class="form-label fw-bolder">Email</label>
+                <input type="text" class="form-control" id="email" name="email" aria-describedby="text">
+            </div>
+             <div class="mb-4">
+                <label for="password" class="form-label fw-bolder">Password</label>
+                <input type="text" class="form-control" id="password" name="password" aria-describedby="text">
+            </div>
+             <div class="mb-4" >
+                <label for="makh" class="form-label fw-bolder">Mã khách hàng</label>
+                <input type="number" min ="1" class="form-control" id="makh" name="makh" aria-describedby="text">
+            </div>
+            
+              <div class="mb-4">
+                <label for="trangthai" class="form-label fw-bolder">Trạng thái</label>
+                <select type="text" class="form-control" id="trangthai" name="trangthai" aria-describedby="text">
+                     <option selected value = "True">Kích hoạt</option>
+                    <option value = "False">Tạm khóa</option>
+                </select>
+            </div>
+            
+          
+            <hr />
+            <div class="d-flex align-items-center justify-content-center my-5 gap-5">
+                <button type="submit" id="themgiohang" class="btn btn-primary px-4 py-2">Thêm thông tin tài khoản</button>
+            </div>
+        </form>
+    </div>
+</div>
+

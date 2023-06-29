@@ -27,8 +27,8 @@
         gap: 20px;
     }
     .pagination > li {
-        font-size: 1.1rem;
-        padding: 3px 11px;
+        font-size: 2rem;
+        padding: 8px 11px;
         border: 1px solid #ccc;
         background-color: #fb5533;
         color: #fff;
@@ -86,7 +86,7 @@
                        
                         <td class="text-center">
                             <a class="px-2" href="@Url.Action("Xoa", "Hang", new { mahang = item.MaHang, isActive = item.IsActive })">
-                                <i class="fa fa-trash text-danger" aria-hidden="true"></i>
+                                <i class="fa @((bool)item.IsActive ? "text-danger"  : "text-success") @((bool)item.IsActive ? "fa-trash" :  "fa-recycle") " aria-hidden="true"></i>
                             </a>
                             <a class="px-2" href="@Url.Action("CapNhat", "Hang", new { area = "Admin", mahang = item.MaHang, isUpdate = false})">
                                 <i class="fa fa-wrench" aria-hidden="true"></i>

@@ -37,21 +37,21 @@
                     <div class="navbar-container">
                         <ul class="navbar-container__links">
                             <li><a asp-area="Admin" asp-controller="Home" asp-action="Index" class="navbar-items navbar-items--hover navbar-items__separate">Kênh Người Bán</a></li>
-                           <li><a asp-area="Admin" asp-controller="Users" asp-action="Login" class="navbar-items navbar-items--hover navbar-items__separate">Trở thành Người bán Super</a></li>
+                           <li><a asp-area="Admin" asp-controller="Users" asp-action="Login" class="navbar-items navbar-items--hover navbar-items__separate">Sign In</a></li>
                             
                             <li href="" class="navbar-items navbar-items--hover navbar-qr-show navbar-items__separate">
                                 Tải ứng dụng
                                 <div class="navbar-items__qr-code">
-                                    <img class="navbar-qrcode-icon" src="./asset/image/qr_code.png" alt="QR Code">
+                                    <img class="navbar-qrcode-icon" src="~/asset/image/qr_code.png" alt="QR Code">
                                     <div class="navbar-app-container">
                                         <a class="navbar-app" href="">
-                                            <img class="navbar-app-icon" src="./asset/image/app_store-icon.png" alt="App Store Icon">
+                                            <img class="navbar-app-icon" src="~/asset/image/app_store-icon.png" alt="App Store Icon">
                                         </a>
                                         <a class="navbar-app" href="">
-                                            <img class="navbar-app-icon" src="./asset/image/google_play-icon.png" alt="Google Play Icon">
+                                            <img class="navbar-app-icon" src="~/asset/image/google_play-icon.png" alt="Google Play Icon">
                                         </a>
                                         <a class="navbar-app" href="">
-                                            <img class="navbar-app-icon" src="./asset/image/app_gallery-icon.png" alt="App Gallery Icon">
+                                            <img class="navbar-app-icon" src="~/asset/image/app_gallery-icon.png" alt="App Gallery Icon">
                                         </a>
                                     </div>
                                 </div>
@@ -146,7 +146,7 @@
                                 </div>
                             </li>
                             <li class="navbar-items navbar-items--hover">
-                                <a class="navbar-items__link" href=""><i class="navbar-icons far fa-question-circle"></i>Hỗ trợ</a>
+                                <a class="navbar-items__link" asp-area="Admin" asp-controller="Users" asp-action="SignUp"><i class="navbar-icons far fa-question-circle"></i>Sign Up</a>
                             </li>
                             <!-- <li class="navbar-items navbar-items--hover">
                                 <a class="navbar-items__link navbar-items__link--textbold navbar-items__separate" href="">Đăng ký</a>

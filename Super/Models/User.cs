@@ -23,9 +23,12 @@ public partial class User
 
     [StringLength(100)]
     public string? Password { get; set; }
+    public bool? IsActive { get; set; }
 
     [Column("MaKH")]
     public int? MaKh { get; set; }
+    [StringLength(200)]
+    public string? Filter { get; set; }
 
     [ForeignKey("MaKh")]
     [InverseProperty("Users")]

@@ -45,7 +45,7 @@ namespace Super.Areas.Admin.Controllers
                 kmdb.Km = khuyenmai;
                 kmdb.Details = moigoi;
                 kmdb.IsActive = trangthai;
-
+                kmdb.Filter = makm.ToLower() + " " + moigoi.ToLower() + khuyenmai.ToLower();
 
                 //hang.Filter = tenhang.ToLower() + manhanhieu.ToLower() + A.ghg(tenhang.ToLower());
                 _context.Add(kmdb);
@@ -70,6 +70,7 @@ namespace Super.Areas.Admin.Controllers
                 itemToUpdate.Url = makm;
                 itemToUpdate.Km = khuyenmai;
                 itemToUpdate.Details = moigoi;
+                itemToUpdate.Filter = makm.ToLower() + " " + moigoi.ToLower() + khuyenmai.ToLower();
                 _context.Update(itemToUpdate);
                 _context.SaveChanges();
                 return RedirectToAction("Index", "Balance", new { area = "Admin" });

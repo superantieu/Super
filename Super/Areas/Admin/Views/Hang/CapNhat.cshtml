@@ -46,12 +46,7 @@
                 <img src="" id="image" width="200" height="200" style="object-fit: cover" />
                 <input type="file" onchange="chooseFile(this)" class="form-control" value="@Model.HinhAnh" id="hinhanh" name="hinhanh" aria-describedby="text">
             </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" @*checked="@((bool)Model.IsActive)"*@ name="kichhoat" id="kichhoat">
-                <label class="form-check-label" for="kichhoat">
-                    Kích hoạt
-                </label>
-            </div>
+        
             <hr />
             <div class="d-flex align-items-center justify-content-center my-5 gap-5">
                 <button type="submit" id="themgiohang" class="btn btn-primary px-4 py-2" >Cập nhật</button>

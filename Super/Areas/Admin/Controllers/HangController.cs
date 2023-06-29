@@ -39,7 +39,7 @@ namespace Super.Areas.Admin.Controllers
             // Update
         }
         [Route("them")]
-        public IActionResult Them(int? mahang, string? tenhang, string? dongiaban, string? manhanhieu,string? mota, string? chungloai,string? khuyenmai, string? imageurl ,string? hinhanh, bool? kichhoat)
+        public IActionResult Them(int? mahang, string? tenhang, string? dongiaban, string? manhanhieu,string? mota, string? chungloai,string? khuyenmai, string? imageurl ,string? hinhanh, bool? trangthai)
         {
             if (!String.IsNullOrEmpty(tenhang))
             {
@@ -52,8 +52,9 @@ namespace Super.Areas.Admin.Controllers
                 hang.MoTa = mota;
                 hang.Src = chungloai;
                 hang.Url = khuyenmai;
-               
-                
+                hang.IsActive = trangthai;
+
+
                 //hang.Filter = tenhang.ToLower() + manhanhieu.ToLower() + A.ghg(tenhang.ToLower());
                 _context.Add(hang);
                 _context.SaveChanges();

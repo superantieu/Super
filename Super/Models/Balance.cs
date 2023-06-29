@@ -17,6 +17,8 @@ public partial class Balance
     [StringLength(50)]
     public string? Km { get; set; }
     public bool? IsActive { get; set; }
+    [StringLength(200)]
+    public string? Filter { get; set; }
 
     [Column(TypeName = "ntext")]
     public string? Details { get; set; }

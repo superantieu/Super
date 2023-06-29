@@ -1,0 +1,33 @@
+﻿@model Super.Models.NhanHieu
+@{
+    ViewData["Title"] = "CapNhat";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="d-flex justify-content-center">
+    <div class="updatedata col-6 px-5 pt-5 border rounded-3 shadow-lg" style="margin-top: 100px">
+        <h2 class="text-center fw-bold pb-4">Chỉnh sửa thông tin nhãn hiệu</h2>
+        <hr />
+        <form action="/nhanhieu/cap-nhat" method="post">
+            <div class="mb-4" hidden>
+                <label for="iden" class="form-label fw-bolder">Mã nhãn hiệu</label>
+                <input type="text" class="form-control" id="iden" name="iden" value="@Model.MaNhanHieu" aria-describedby="text">
+            </div>
+                <div class="mb-4">
+                <label for="tennhanhieu" class="form-label fw-bolder">User Name</label>
+                <input type="text" class="form-control" id="tennhanhieu" name="tennhanhieu" value="@Model.TenNhanHieu" aria-describedby="text">
+            </div>
+            <div class="mb-4">
+                <label for="macungcap" class="form-label fw-bolder">Email</label>
+                <input type="text" class="form-control" id="macungcap" name="macungcap" value="@Model.MaCungCap" aria-describedby="text">
+            </div>
+       
+      
+          
+            <hr />
+            <div class="d-flex align-items-center justify-content-center my-5 gap-5">
+                <button type="submit" id="themgiohang" class="btn btn-primary px-4 py-2" >Cập nhật</button>
+            </div>
+        </form>
+    </div>
+</div>
