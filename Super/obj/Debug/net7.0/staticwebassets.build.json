@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fwH0qvPPa0Hcycb793OPR3eSj9q7tqnmt9KwggVpkus=",
+  "Hash": "zP6EvNd/d+TcRKLzX3tVNpNu8e+1OHjXrlFchwxLGyA=",
   "Source": "Super",
   "BasePath": "_content/Super",
   "Mode": "Default",
@@ -31057,6 +31057,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\font-awesome.scss"
+    },
+    {
+      "Identity": "F:\\1.Study\\C#\\28-06-Super\\Super\\Super\\wwwroot\\js\\search.js",
+      "SourceId": "Super",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\1.Study\\C#\\28-06-Super\\Super\\Super\\wwwroot\\",
+      "BasePath": "_content/Super",
+      "RelativePath": "js/search.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\search.js"
     },
     {
       "Identity": "F:\\1.Study\\C#\\28-06-Super\\Super\\Super\\wwwroot\\js\\site.js",

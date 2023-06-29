@@ -12,6 +12,7 @@
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
+
 <style>
     .next-pre {
         margin-top: 35px;
@@ -27,8 +28,8 @@
         gap: 20px;
     }
     .pagination > li {
-        font-size: 2rem;
-        padding: 8px 11px;
+        font-size: 1.1rem;
+        padding: 3px 11px;
         border: 1px solid #ccc;
         background-color: #fb5533;
         color: #fff;
@@ -40,12 +41,51 @@
     height: 40px;
     object-fit: cover;
     }
+    .header-searchbox-search {
+            height: 50px;
+    margin: 20px 550px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid #fb5533;
+    border-radius: 99px;
+    }
+    .header-search__input {
+        border: none;
+      outline: none;
+    font-size: 1.2rem;
+}
+    .header-search__btn {
+        font-size: 1.5rem;
+    }
+    }
 </style>
 
+ <div class="header-searchbox-search">
+                                <div class="header-search__input-wrap">
+                                    <input type="text" class="header-search__input" placeholder="Tìm kiếm" id="searchInput">
+     
 
+                                       
+                                   @* <div class="header-search__history">
+                                        <h3 class="search__history-heading">Lịch sử tìm kiếm</h3>
+                                        <ul class="search__history-list">
+                                            <li class="search__history-item">
+                                                <a href="">Quần hường</a>
+                                            </li>
+                                            <li class="search__history-item">
+                                                <a href="">Áo tím mộng mơ</a>
+                                            </li>
+                                        </ul>
+                                    </div>*@
+                                </div>
+                                <a href="" type="" class="header-search__btn">
+                                    <i class="header-search-icon fas fa-search"></i>
+                                </a>
+                            </div>
 <div class="quanly hide-on-mobile col l-10 m-12 s-12" style="margin: 20px auto;">
     <h1 class="quanlyds">Quản lý danh sách hàng</h1>
-    <table class="table table-striped overflow-scroll">
+    <table  class="table table-striped overflow-scroll">
         <thead>
             <tr class="text-center">
                 <th scope="col">STT</th>
@@ -61,14 +101,14 @@
                 <th scope="col">Thao tác</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="searchLists">
             @if (Model != null)
             {
                 int i = 0;
                 foreach (var item in Model)
-                {
+                {   
                     i++;
-                    <tr>
+                    <tr class="supcua">
                         <td class="text-center"><div>@i</div></td>
                         <td class="text-center">@item.MaHang</td>
                         <td class="text-center">@item.TenHang</td>
@@ -76,7 +116,6 @@
                         <td class="text-center">@item.MaNhanHieu</td>
                         <td class="text-center">@item.MoTa</td>
                         <td class="text-center" ><img src="@item.HinhAnh" /></td>
-                        @*<td class="text-center">@item.IsActive</td>*@
                            <td class="text-center @((bool)item.IsActive ? "text-success" : "text-danger")">
                 @((bool)item.IsActive ? "Kích hoạt" : "Tạm khóa")
                 </td>
@@ -110,3 +149,4 @@
     </a>
 </div>
    
+<script src="~/js/search.js"></script>

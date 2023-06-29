@@ -87,6 +87,24 @@ namespace Super.Areas.Admin.Controllers
                 return RedirectToAction("Index", "Hang", new { area = "Admin" });
             }
         }
+        [Route("search")]
+        public IActionResult Search(string searchData)
+        {
+
+            if (!String.IsNullOrEmpty(searchData))
+            {
+                var searchResults = _context.Hangs
+
+                .Where(x => x.Filter.Contains(searchData))
+                .ToList();
+                return Json(searchResults);
+            }
+            else
+            {
+                return View();
+            }
+
+        }
 
     }
 }

@@ -8,7 +8,7 @@ $(document).ready(function () {
     var currentSearchData = '';
 
     var supcua = $(".supcua");
-
+    console.log(supcua);
 
     $('#searchInput').on('input', function () {
 
