@@ -39,9 +39,48 @@
     height: 40px;
     object-fit: cover;
     }
+    .header-searchbox-search {
+            height: 50px;
+    margin: 20px 550px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid #fb5533;
+    border-radius: 99px;
+    }
+    .header-search__input {
+        border: none;
+      outline: none;
+    font-size: 1.2rem;
+}
+    .header-search__btn {
+        font-size: 1.5rem;
+    }
+    }
 </style>
 
+ <div class="header-searchbox-search">
+                                <div class="header-search__input-wrap">
+                                    <input type="text" class="header-search__input" placeholder="Tìm kiếm" id="searchInput">
+     
 
+                                       
+                                   @* <div class="header-search__history">
+                                        <h3 class="search__history-heading">Lịch sử tìm kiếm</h3>
+                                        <ul class="search__history-list">
+                                            <li class="search__history-item">
+                                                <a href="">Quần hường</a>
+                                            </li>
+                                            <li class="search__history-item">
+                                                <a href="">Áo tím mộng mơ</a>
+                                            </li>
+                                        </ul>
+                                    </div>*@
+                                </div>
+                                <a href="" type="" class="header-search__btn">
+                                    <i class="header-search-icon fas fa-search"></i>
+                                </a>
+                            </div>
 <div class="quanly hide-on-mobile col l-10 m-12 s-12" style="margin: 20px auto;">
     <h1 class="quanlyds">Quản lý danh sách khuyến mại</h1>
     <table class="table table-striped overflow-scroll">
@@ -55,14 +94,14 @@
                 <th scope="col">Thao tác</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="searchLists">
             @if (Model != null)
             {
                 int i = 0;
                 foreach (var item in Model)
                 {
                     i++;
-                    <tr>
+                    <tr class="supcua">
                         <td class="text-center"><div>@i</div></td>
                         <td class="text-center">@item.Url</td>
                         <td class="text-center">@item.Km</td>
@@ -98,4 +137,4 @@
 </div>
    
 
-
+<script src="~/js/khuyenmaisearch.js"></script>

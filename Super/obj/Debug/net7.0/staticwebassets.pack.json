@@ -7301,6 +7301,14 @@
       "PackagePath": "staticwebassets\\font-awesome-4.7.0\\font-awesome-4.7.0\\scss\\font-awesome.scss"
     },
     {
+      "Id": "F:\\1.Study\\C#\\28-06-Super\\Super\\Super\\wwwroot\\js\\khuyenmaisearch.js",
+      "PackagePath": "staticwebassets\\js\\khuyenmaisearch.js"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\28-06-Super\\Super\\Super\\wwwroot\\js\\nhanhieusearch.js",
+      "PackagePath": "staticwebassets\\js\\nhanhieusearch.js"
+    },
+    {
       "Id": "F:\\1.Study\\C#\\28-06-Super\\Super\\Super\\wwwroot\\js\\search.js",
       "PackagePath": "staticwebassets\\js\\search.js"
     },
