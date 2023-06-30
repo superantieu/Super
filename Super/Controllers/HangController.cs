@@ -86,8 +86,8 @@ namespace Super.Controllers
             if (!String.IsNullOrEmpty(searchData))
             {
                 var searchResults = _context.Hangs
-                
-                .Where(x => x.Filter.Contains(searchData))
+
+                .Where(x => x.IsActive == true && x.Filter.Contains(searchData))
                 .ToList();
                 return Json(searchResults);
             }

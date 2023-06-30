@@ -10,7 +10,7 @@
         <h2 class="text-center fw-bold pb-4">Chỉnh sửa thông tin sản phẩm</h2>
         <hr />
         <form action="/hang/cap-nhat" method="post">
-            <div class="mb-4">
+            <div class="mb-4" hidden>
                 <label for="makhoa" class="form-label fw-bolder">Mã Hàng</label>
                 <input type="text" class="form-control" id="mahang" name="mahang" value="@Model.MaHang" aria-describedby="text">
             </div><div class="mb-4">
@@ -37,12 +37,17 @@
                 <label for="khuyenmai" class="form-label fw-bolder">Mã khuyến mại</label>
                 <input type="text" class="form-control" id="khuyenmai" name="khuyenmai" value="@Model.Url" aria-describedby="text">
             </div>
+             <div class="mb-4">
+                <label for="ngaynhap" class="form-label fw-bolder">Ngày nhập hàng</label>
+                <input type="text" value="@Model.NgayNhap" class="form-control" id="ngayban" name="ngayban" aria-describedby="text" hidden>
+                <input type="date" onchange="chooseDate(this)" value="" class="form-control" id="ngaynhap" name="ngaynhap" aria-describedby="text">
+            </div>
            <div class="mb-4" hidden>
                 <label for="imageurl" class="form-label fw-bolder" hidden>Mã nhãn hiệu</label>
                 <input type="text" value="@Model.HinhAnh" class="form-control" id="imageurl" name="imageurl" aria-describedby="text" hidden>
             </div>
             <div class="mb-4">
-                <label for="hinhanh" class="form-label fw-bolder">Link Hình Ảnh</label>
+                <label for="hinhanh" class="form-label fw-bolder">Hình Ảnh</label>
                 <img src="@Model.HinhAnh" id="image" width="200" height="200" style="object-fit: cover" />
                 <input type="file" onchange="chooseFile(this)" class="form-control" value="@Model.HinhAnh" id="hinhanh" name="hinhanh" aria-describedby="text">
             </div>
@@ -76,6 +81,15 @@
                 
                 
                
+            }
+        }
+             function chooseDate(fileInput) 
+         {
+            if (fileInput) 
+            {             
+                var date = $('#ngaynhap');               
+                 $('#ngayban').attr('value', date.val())
+
             }
         }
    

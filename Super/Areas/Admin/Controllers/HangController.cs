@@ -47,7 +47,7 @@ namespace Super.Areas.Admin.Controllers
             // Update
         }
         [Route("them")]
-        public IActionResult Them(int? mahang, string? tenhang, string? dongiaban, string? manhanhieu,string? mota, string? chungloai,string? khuyenmai, string? imageurl ,string? hinhanh, bool? trangthai)
+        public IActionResult Them(int? mahang, string? tenhang, string? dongiaban, string? manhanhieu,string? mota, string? chungloai,string? khuyenmai,DateTime? ngaynhap, string? imageurl ,string? hinhanh, bool? trangthai)
         {
             if (!String.IsNullOrEmpty(tenhang))
             {
@@ -60,6 +60,7 @@ namespace Super.Areas.Admin.Controllers
                 hang.MoTa = mota;
                 hang.Src = chungloai;
                 hang.Url = khuyenmai;
+                hang.NgayNhap = ngaynhap;
                 hang.IsActive = trangthai;
 
 
@@ -72,7 +73,7 @@ namespace Super.Areas.Admin.Controllers
 
         }
         [Route("cap-nhat")]
-        public IActionResult CapNhat(int? mahang, string? tenhang, string? dongiaban, string? manhanhieu, string? mota, string? chungloai, string? khuyenmai, string? imageurl, string? hinhanh, bool? isUpdate = true)
+        public IActionResult CapNhat(int? mahang, string? tenhang, string? dongiaban, string? manhanhieu, string? mota, string? chungloai, string? khuyenmai, DateTime? ngayban, string? imageurl, string? hinhanh, bool? isUpdate = true)
         {
 
             var itemToUpdate = _context.Hangs.FirstOrDefault(x => x.MaHang == mahang);
@@ -90,6 +91,7 @@ namespace Super.Areas.Admin.Controllers
                 itemToUpdate.MoTa = mota;
                 itemToUpdate.Src = chungloai;
                 itemToUpdate.Url = khuyenmai;
+                itemToUpdate.NgayNhap = ngayban;
                 _context.Update(itemToUpdate);
                 _context.SaveChanges();
                 return RedirectToAction("Index", "Hang", new { area = "Admin" });

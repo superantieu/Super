@@ -41,7 +41,7 @@ $(document).ready(function () {
                     $.each(searchResults, function (index, result) {
                         console.log(result)
                         var search = ` <div class="supcua col l-2-4 m-4 s-6">
-                                            <a class="product" href="/Hang/innerIndex?mahang=${result.maHang}">
+                                            <a class="product" href="/Hang/Super?mahang=${result.maHang}&url=${result.url}">
                                                 <div class="product-image-01" style="background-image: url(${result.hinhAnh});">
                                                 </div>
                                                  <div class="product-info">
@@ -83,8 +83,8 @@ $(document).ready(function () {
                             </a>
                                     </div > `
 
-
-                        $('#searchList').append(search);
+                        if (result.isActive == true) { $('#searchList').append(search) }
+                        
                     });
 
                 }
