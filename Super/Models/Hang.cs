@@ -40,6 +40,9 @@ public partial class Hang
     [StringLength(50)]
     public string? Src { get; set; }
 
+    [Column(TypeName = "date")]
+    public DateTime? NgayNhap { get; set; }
+
     [InverseProperty("MaHangNavigation")]
     public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; } = new List<ChiTietHoaDon>();
 

@@ -23,6 +23,14 @@ namespace Super.Areas.Admin.Controllers
             //var item = _context.Hangs.ToList();
             return View(model);
         }
+        public IActionResult New(int page = 1, int pageSize = 10)
+        {
+            //var supe = new Sup();
+            //var model = supe.ListAllPaging(page, pageSize);
+            var model = _context.Hangs.OrderByDescending(x => x.NgayNhap).ToPagedList(page, pageSize);
+            //var item = _context.Hangs.ToList();
+            return View(model);
+        }
         [Route("xoa")]
         public IActionResult Xoa(int? mahang, bool isActive)
         {

@@ -39,11 +39,11 @@
             </div>
            <div class="mb-4" hidden>
                 <label for="imageurl" class="form-label fw-bolder" hidden>Mã nhãn hiệu</label>
-                <input type="text" value="" class="form-control" id="imageurl" name="imageurl" aria-describedby="text" hidden>
+                <input type="text" value="@Model.HinhAnh" class="form-control" id="imageurl" name="imageurl" aria-describedby="text" hidden>
             </div>
             <div class="mb-4">
                 <label for="hinhanh" class="form-label fw-bolder">Link Hình Ảnh</label>
-                <img src="" id="image" width="200" height="200" style="object-fit: cover" />
+                <img src="@Model.HinhAnh" id="image" width="200" height="200" style="object-fit: cover" />
                 <input type="file" onchange="chooseFile(this)" class="form-control" value="@Model.HinhAnh" id="hinhanh" name="hinhanh" aria-describedby="text">
             </div>
         

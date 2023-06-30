@@ -28,22 +28,47 @@ namespace Super.Controllers
         //}
         public IActionResult Index(int page = 1, int pageSize = 10)
         {
-            // pagination: take(5) --- skip((page - 1) * 5)
-            //HomeData data = new HomeData();
-            //int limit = 10;
-            //int skip = ((page - 1) * limit);
-
-            //var item = _context.Hangs.OrderByDescending(k => k.MaHang).Where(c => c.IsActive == true)
-            //    .Skip(skip)
-            //    .Take(limit)
-            //    .ToList();
-            //data.DSH = item;
-            //ViewBag.CurrentPage = page;
-            //return View(data);
+      
             var model = _context.Hangs.OrderByDescending(x => x.MaHang)
                 .Where(c => c.IsActive == true)
                 .ToPagedList(page, pageSize);
            
+            return View(model);
+        }
+        public IActionResult Name(int page = 1, int pageSize = 10)
+        {
+
+            var model = _context.Hangs.OrderBy(x => x.TenHang)
+                .Where(c => c.IsActive == true)
+                .ToPagedList(page, pageSize);
+
+            return View(model);
+        }
+        public IActionResult New(int page = 1, int pageSize = 10)
+        {
+
+            var model = _context.Hangs.OrderByDescending(x => x.NgayNhap)
+                .Where(c => c.IsActive == true)
+                .ToPagedList(page, pageSize);
+
+            return View(model);
+        }
+        public IActionResult TopPrice(int page = 1, int pageSize = 10)
+        {
+
+            var model = _context.Hangs.OrderByDescending(x => x.DonGiaHang)
+                .Where(c => c.IsActive == true)
+                .ToPagedList(page, pageSize);
+
+            return View(model);
+        }
+        public IActionResult BotPrice(int page = 1, int pageSize = 10)
+        {
+
+            var model = _context.Hangs.OrderBy(x => x.DonGiaHang)
+                .Where(c => c.IsActive == true)
+                .ToPagedList(page, pageSize);
+
             return View(model);
         }
         public IActionResult ThoiTrang(int page = 1, int pageSize = 10)
