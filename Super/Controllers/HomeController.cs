@@ -26,14 +26,23 @@ namespace Super.Controllers
         //    return View(data);
 
         //}
-        public IActionResult Index(int page = 1, int pageSize = 10)
+        public IActionResult Index(int page = 1, int pageSize = 10, string nu = "all")
         {
-      
-            var model = _context.Hangs.OrderByDescending(x => x.MaHang)
+            if (nu == "all")
+            {
+                var model = _context.Hangs.OrderByDescending(x => x.MaHang)
                 .Where(c => c.IsActive == true)
                 .ToPagedList(page, pageSize);
-           
-            return View(model);
+                ViewBag.Nu = nu;
+                return View(model);
+            }
+            else {
+                var model = _context.Hangs.OrderByDescending(x => x.MaHang)
+                .Where(c => c.Src == nu && c.IsActive == true)
+                .ToPagedList(page, pageSize);
+                ViewBag.Nu = nu;
+                return View(model);
+            }
         }
         public IActionResult Name(int page = 1, int pageSize = 10)
         {
@@ -71,53 +80,7 @@ namespace Super.Controllers
 
             return View(model);
         }
-        public IActionResult ThoiTrang(int page = 1, int pageSize = 10)
-        {
-           
-
-            var model = _context.Hangs.OrderByDescending(k => k.MaHang)
-                .Where(c => c.Src == "Ava" && c.IsActive == true)
-                .ToPagedList(page, pageSize);
-
-            return View(model);
-
-
-        }
-        public IActionResult Vukhi(int page = 1, int pageSize = 10)
-        {
-            
-
-            var model = _context.Hangs.OrderByDescending(k => k.MaHang)
-                .Where(c => c.Src == "Weapon" && c.IsActive == true)
-                .ToPagedList(page, pageSize);
-
-            return View(model);
-
-
-        }
-        public IActionResult Giap(int page = 1, int pageSize = 10)
-        {
-          
-
-            var model = _context.Hangs.OrderByDescending(k => k.MaHang)
-                .Where(c => c.Src == "Protector" && c.IsActive == true)
-                .ToPagedList(page, pageSize);
-
-            return View(model);
-
-
-        }
-        public IActionResult TrangSuc(int page = 1, int pageSize = 10)
-        {
-       
-
-            var model = _context.Hangs.OrderByDescending(k => k.MaHang)
-                .Where(c => c.Src == "Accessory" && c.IsActive == true)
-                .ToPagedList(page, pageSize);
-            return View(model);
-
-
-        }
+        
 
         public IActionResult _partialHang()
         {

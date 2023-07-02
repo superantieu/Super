@@ -9,7 +9,7 @@
     <div class="updatedata col-6 px-5 pt-5 border rounded-3 shadow-lg" style="margin-top: 100px">
         <h2 class="text-center fw-bold pb-4">Chỉnh sửa thông tin sản phẩm</h2>
         <hr />
-        <form action="/hang/cap-nhat" method="post">
+        <form action="@Url.Action("CapNhat", "Hang", new { area = "Admin"})" enctype="multipart/form-data" method="post">
             <div class="mb-4" hidden>
                 <label for="makhoa" class="form-label fw-bolder">Mã Hàng</label>
                 <input type="text" class="form-control" id="mahang" name="mahang" value="@Model.MaHang" aria-describedby="text">
@@ -40,16 +40,16 @@
              <div class="mb-4">
                 <label for="ngaynhap" class="form-label fw-bolder">Ngày nhập hàng</label>
                 <input type="text" value="@Model.NgayNhap" class="form-control" id="ngayban" name="ngayban" aria-describedby="text" hidden>
-                <input type="date" onchange="chooseDate(this)" value="" class="form-control" id="ngaynhap" name="ngaynhap" aria-describedby="text">
+                <input type="date" onchange="chooseDate(this)" placeholder="@Model.NgayNhap" value="" class="form-control" id="ngaynhap" name="ngaynhap" aria-describedby="text">
             </div>
-           <div class="mb-4" hidden>
+          @* <div class="mb-4" hidden>
                 <label for="imageurl" class="form-label fw-bolder" hidden>Mã nhãn hiệu</label>
                 <input type="text" value="@Model.HinhAnh" class="form-control" id="imageurl" name="imageurl" aria-describedby="text" hidden>
-            </div>
+            </div>*@
             <div class="mb-4">
                 <label for="hinhanh" class="form-label fw-bolder">Hình Ảnh</label>
                 <img src="@Model.HinhAnh" id="image" width="200" height="200" style="object-fit: cover" />
-                <input type="file" onchange="chooseFile(this)" class="form-control" value="@Model.HinhAnh" id="hinhanh" name="hinhanh" aria-describedby="text">
+                <input type="file" onchange="chooseFile(this)" placeholder="@Model.HinhAnh" class="form-control" value="@Model.HinhAnh" id="hinhanh" name="hinhanh" aria-describedby="text">
             </div>
         
             <hr />

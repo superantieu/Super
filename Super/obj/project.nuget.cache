@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aXyRhCY82cHpiuc+GvtlDmhEZNRqcpH829mnGAGpR8jFUgAtPYtnczn2UiG/mSZCYouWyx8NQQQxoejjcvCj2w==",
+  "dgSpecHash": "gzVkmZ8yegXaAU5s1Zod48zofPA9oCo2VWdA3F2WrWvqqsWBNWKaEOuFFGwuxwbWeEcyEcbiVi14XkiXK3dAbw==",
   "success": true,
-  "projectFilePath": "F:\\1.Study\\C#\\28-06-Super\\Super\\Super\\Super.csproj",
+  "projectFilePath": "F:\\1.Study\\C#\\01-07-Super\\Super\\Super\\Super.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

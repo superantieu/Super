@@ -66,20 +66,20 @@
                         Danh mục
                     </h3>
                     <ul class="category-list">
-                        <li class="category-item">
-                            <a asp-area="" asp-controller="Home" asp-action="Index" class="category-item__link category-item__link--active">Sản phẩm</a>
+                        <li class="category-item" >
+                            <a href="@Url.Action("Index", "Home", new { nu = "all"})" class="category-item__link category-item__link--active">Sản phẩm</a>
+                        </li>
+                        <li class="category-item" value="Ava">
+                            <a asp-area="" asp-controller="Home" asp-action="Index" asp-route-nu="Ava" class="category-item__link">Set thời trang</a>
                         </li>
                         <li class="category-item">
-                            <a asp-area="" asp-controller="Home" asp-action="ThoiTrang" class="category-item__link">Set thời trang</a>
+                            <a asp-area="" asp-controller="Home" asp-action="Index" asp-route-nu="Weapon"class="category-item__link">Vũ khí</a>
                         </li>
                         <li class="category-item">
-                            <a asp-area="" asp-controller="Home" asp-action="Vukhi" class="category-item__link">Vũ khí</a>
+                            <a asp-area="" asp-controller="Home" asp-action="Index" asp-route-nu="Protector" class="category-item__link">Giáp</a>
                         </li>
                         <li class="category-item">
-                            <a asp-area="" asp-controller="Home" asp-action="Giap" class="category-item__link">Giáp</a>
-                        </li>
-                        <li class="category-item">
-                            <a asp-area="" asp-controller="Home" asp-action="TrangSuc" class="category-item__link">Trang sức</a>
+                            <a asp-area="" asp-controller="Home" asp-action="Index" asp-route-nu="Accessory" class="category-item__link">Trang sức</a>
                         </li>
                     </ul>
                 </nav>
@@ -183,7 +183,7 @@
                     </div>
                         
                 </div>
-                 <div class="next-pre">@Html.PagedListPager(Model, page => Url.Action("Index","Home", new { page }))</div>         
+                 <div class="next-pre">@Html.PagedListPager(Model, (page)  => Url.Action("Index","Home", new {nu=ViewBag.Nu,page}))</div>         
             </div>  
 
 
@@ -191,4 +191,4 @@
         </div>
     </div>   
 </div>
-        
+  
