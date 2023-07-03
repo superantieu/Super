@@ -1,8 +1,14 @@
-﻿@model Super.Models.Hang
+﻿@model IEnumerable<Super.Models.Balance>
+
 @{
     ViewData["Title"] = "Them";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<style>
+    option {
+        font-size: 1.2rem;
+    }
+</style>
  
 <div class="d-flex justify-content-center">
     <div class="updatedata col-6 px-5 pt-5 border rounded-3 shadow-lg" style="margin-top: 100px">
@@ -18,8 +24,8 @@
                 <input type="text" class="form-control" id="tenhang" name="tenhang" aria-describedby="text">
             </div>
             <div class="mb-4">
-                <label for="dongiahang" class="form-label fw-bolder">Đơn Giá Hàng</label>
-                <input type="text" class="form-control" id="dongiahang" name="dongiahang" aria-describedby="text">
+                <label for="dongiaban" class="form-label fw-bolder">Đơn Giá Hàng</label>
+                <input type="text" class="form-control" id="dongiaban" name="dongiaban" aria-describedby="text">
             </div>
              <div class="mb-4">
                 <label for="manhanhieu" class="form-label fw-bolder">Mã nhãn hiệu</label>
@@ -30,12 +36,27 @@
                 <input type="text" class="form-control" id="mota" name="mota"aria-describedby="text">
             </div>   
             <div class="mb-4">
-                <label for="src" class="form-label fw-bolder">Chủng loại</label>
-                <input type="text" class="form-control" id="src" name="src"aria-describedby="text">
+                <label for="chungloai" class="form-label fw-bolder">Chủng loại</label>
+                <input type="text" class="form-control" id="chungloai" name="chungloai"aria-describedby="text">
             </div>
             <div class="mb-4">
-                <label for="url" class="form-label fw-bolder">Mã khuyến mại</label>
-                <input type="text" class="form-control" id="url" name="url"aria-describedby="text">
+                <label for="check" class="form-label fw-bolder">Mã khuyến mại</label>
+                <input type="checkbox" onclick="if(this.checked){myFunction()} else {youFunction()} " style="display: block" id="check" name="check"aria-describedby="text">
+            </div>
+            <div class="mb-4" id="check-km" style="display:none">
+                <select type="text" class="form-control" id="khuyenmai" name="khuyenmai" aria-describedby="text">
+                        <option  selected value = "">Không khuyến mãi</option>
+                    @if (Model != null){       foreach (var item in Model)
+                {
+                   
+                        <option  value = "@item.Url">@item.Km</option>
+                        
+                    
+                }}
+             
+                    
+                 
+                </select>
             </div>
             <div class="mb-4">
                 <label for="ngaynhap" class="form-label fw-bolder">Ngày nhập hàng</label>
@@ -51,8 +72,8 @@
                 <input type="file" onchange="chooseFile(this)" class="form-control" value="" id="hinhanh" name="hinhanh" aria-describedby="text">
             </div>
             <div class="mb-4">
-                <label for="isactive" class="form-label fw-bolder">Trạng thái</label>
-                <select type="text" class="form-control" id="isactive" name="isactive" aria-describedby="text">
+                <label for="trangthai" class="form-label fw-bolder">Trạng thái</label>
+                <select type="text" class="form-control" id="trangthai" name="trangthai" aria-describedby="text">
                      <option selected value = "True">Kích hoạt</option>
                     <option value = "False">Tạm khóa</option>
                 </select>
@@ -88,4 +109,11 @@
             }
         }
    
+
+        function myFunction() {
+  $("#check-km").attr('style','display: block');
+}
+     function youFunction() {
+  $("#check-km").attr('style','display: none');
+}
 </script>

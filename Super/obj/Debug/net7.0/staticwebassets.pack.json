@@ -6901,6 +6901,18 @@
       "PackagePath": "staticwebassets\\asset\\fonts\\fontawesome\\webfonts\\fa-solid-900.woff2"
     },
     {
+      "Id": "F:\\1.Study\\C#\\01-07-Super\\Super\\Super\\wwwroot\\asset\\image\\1.png",
+      "PackagePath": "staticwebassets\\asset\\image\\1.png"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\01-07-Super\\Super\\Super\\wwwroot\\asset\\image\\244315265_3018019235076088_4012419016674015691_n.jpg",
+      "PackagePath": "staticwebassets\\asset\\image\\244315265_3018019235076088_4012419016674015691_n.jpg"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\01-07-Super\\Super\\Super\\wwwroot\\asset\\image\\244352241_3169941369901293_7809379467376716781_n.jpg",
+      "PackagePath": "staticwebassets\\asset\\image\\244352241_3169941369901293_7809379467376716781_n.jpg"
+    },
+    {
       "Id": "F:\\1.Study\\C#\\01-07-Super\\Super\\Super\\wwwroot\\asset\\image\\350463725_681243267095135_3769560145713453096_n.jpg",
       "PackagePath": "staticwebassets\\asset\\image\\350463725_681243267095135_3769560145713453096_n.jpg"
     },
@@ -7163,6 +7175,10 @@
     {
       "Id": "F:\\1.Study\\C#\\01-07-Super\\Super\\Super\\wwwroot\\asset\\image\\qr_code.png",
       "PackagePath": "staticwebassets\\asset\\image\\qr_code.png"
+    },
+    {
+      "Id": "F:\\1.Study\\C#\\01-07-Super\\Super\\Super\\wwwroot\\asset\\image\\tải xuống.jpg",
+      "PackagePath": "staticwebassets\\asset\\image\\tải xuống.jpg"
     },
     {
       "Id": "F:\\1.Study\\C#\\01-07-Super\\Super\\Super\\wwwroot\\asset\\image\\user_icon_S.png",
