@@ -16,9 +16,9 @@ $(document).ready(function () {
         var searchData = $(this).val();
         if (searchData === '') {
 
-            $('#searchList').empty();
+            $('#searchListss').empty();
 
-            $('#searchList').append(supcua);
+            
 
 
         } else {
@@ -31,8 +31,8 @@ $(document).ready(function () {
                 success: function (searchResults) {
 
                     // so sánh giá trị search hiện tại và giá trị trước đó
-                    if (searchData !== currentSearchData || searchData !== '') {
-                        $('#searchList').empty();
+                    if (searchData !== currentSearchData) {
+                        $('#searchListss').empty();
                         currentSearchData = searchData;
                     }
 
@@ -40,50 +40,10 @@ $(document).ready(function () {
                     // lặp qua phần tử trong kết quả trả về từ ajax và thêm vào tag trong html
                     $.each(searchResults, function (index, result) {
                         console.log(result)
-                        var search = ` <div class="supcua col l-2-4 m-4 s-6">
-                                            <a class="product" href="/Hang/Super?mahang=${result.maHang}&url=${result.url}">
-                                                <div class="product-image-01" style="background-image: url(${result.hinhAnh});">
-                                                </div>
-                                                 <div class="product-info">
-                                                <h4 class="product-info__heading">${result.tenHang}</h4>
-                                                <span class="product-info__hastag">#${result.maNhanHieu}</span>
-                                                <div class="product-info__price">
-                                                        <span class="product-info__price-old">52.000.000đ</span>
-                                                        <span class="product-info__price-new">${result.donGiaHang} đ</span>
-                                                </div>
-                                                <div class="product-react">
-                                                     <span href="" class="product-react__like product-react__like--liked">
-                                                         <i class="far fa-heart product__like-false"></i>
-                                                         <i class="fas fa-heart product__like-true"></i>
-                                                     </span>
-                                                     <div class="product-sold">
-                                                        <span class="product-sold__star-point">
-                                                            <i class="product-sold__star-point--gold fas fa-star"></i>
-                                                            <i class="product-sold__star-point--gold fas fa-star"></i>
-                                                            <i class="product-sold__star-point--gold fas fa-star"></i>
-                                                            <i class="product-sold__star-point--gold fas fa-star"></i>
-                                                            <i class="fas fa-star"></i>
-                                                        </span>
-                                                        <p class="product-sold__text">Đã bán</p>
-                                                        <p class="product-sold__amount">41,7k</p>
-                                                    </div>
-                                                </div>
-                                                 <span class="product-location">Hà Nội</span>
-                                        </div>
-                                <div class="product-label">
-                                    <div class="product-label__like">
-                                        <i class="fas fa-check"></i>
-                                        <span class="product-label__like-text">Yêu thích</span>
-                                    </div>
-                                    <div class="product-label__saleoff">
-                                        <span class="product-label__saleoff-percent">SALE</span>
-                                        <span class="product-label__saleoff-text">OFF</span>
-                                    </div>
-                                </div>
-                            </a>
-                                    </div > `
+                        
+                        var search = `<li class="search-item" style="text-decoration: none"><a class="search-itemm" href = "/Hang/Super?mahang=${result.maHang}&url=${result.url}">${result.tenHang}</a></li>`;
 
-                        if (result.isActive == true) { $('#searchList').append(search) }
+                        if (result.isActive == true) { $('#searchListss').append(search) }
                         
                     });
 
@@ -93,10 +53,15 @@ $(document).ready(function () {
 
     });
 
-
-
- console.log($('.pagination').children)
+   
     
 
 });
 
+function myFunction() {
+    $('#searchListss').attr('style', 'display: block')
+}
+
+function youFunction() {
+    $('#searchListss').attr('style', 'display: none')
+}
