@@ -53,7 +53,21 @@ $(document).ready(function () {
 
     });
 
-   
+    $('.addToCartButton').click(function () {
+        var ProductId = $(this).data('productid')
+
+        $.ajax({
+            url: '/GioHang/AddToCart',
+            type: 'POST',
+            data: { ProductId: ProductId },
+            success: function () {
+                alert("Thêm sản phẩm thành công")
+            },
+            error: function () {
+                alert("Có lỗi xảy ra")
+            }
+        })
+    })
     
 
 });

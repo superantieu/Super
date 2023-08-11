@@ -23,10 +23,6 @@ public partial class HoaDon
 
     public bool? IsActive { get; set; }
 
-    [InverseProperty("MaHdNavigation")]
-    public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; } = new List<ChiTietHoaDon>();
-
-    [ForeignKey("MaKh")]
-    [InverseProperty("HoaDons")]
-    public virtual KhachHang? MaKhNavigation { get; set; }
+    [Column(TypeName = "decimal(10, 2)")]
+    public decimal? TongTien { get; set; }
 }

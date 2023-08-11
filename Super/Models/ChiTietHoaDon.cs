@@ -19,24 +19,22 @@ public partial class ChiTietHoaDon
 
     public int? SoLuongMua { get; set; }
 
-    [StringLength(50)]
-    public string? DonGiaBan { get; set; }
+    [Column(TypeName = "decimal(10, 2)")]
+    public decimal? DonGiaBan { get; set; }
 
-    [StringLength(50)]
-    public string? ThanhTien { get; set; }
+    [Column(TypeName = "decimal(10, 2)")]
+    public decimal? ThanhTien { get; set; }
 
-    [StringLength(50)]
-    public string? TongTien { get; set; }
+    [Column(TypeName = "decimal(10, 2)")]
+    public decimal? TongTien { get; set; }
 
     public string? Filter { get; set; }
 
     public bool? IsActive { get; set; }
 
-    [ForeignKey("MaHang")]
-    [InverseProperty("ChiTietHoaDons")]
-    public virtual Hang MaHangNavigation { get; set; } = null!;
+    [Column("OrderID")]
+    public int? OrderId { get; set; }
 
-    [ForeignKey("MaHd")]
-    [InverseProperty("ChiTietHoaDons")]
-    public virtual HoaDon MaHdNavigation { get; set; } = null!;
+    [Column("ProductID")]
+    public int? ProductId { get; set; }
 }

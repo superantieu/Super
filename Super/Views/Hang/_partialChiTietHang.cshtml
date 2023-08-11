@@ -26,16 +26,17 @@
                         <span class="inner-infor__price product-info__price-new">Giá tiền: @item.DonGiaHang đ</span>
                     </div>
 
-                    <form action="/HoaDon/CapNhat" method="post">
                         <div class="mb-4">
                             <label for="soluong" class="inner-label form-label fw-bolder">Số lượng</label>
                             <input type="number" min="1" class="inner-input form-control" id="soluong" name="soluong" aria-describedby="text">
                         </div>
                         <hr class="inner-hr"/>
-                        <div class="d-flex align-items-center justify-content-center my-5 gap-5">
-                            <button type="submit" id="themgiohang" class="inner-btn btn btn-primary px-4 py-2" >Thêm vào giỏ hàng</button>
-                        </div>
-                    </form>
+                            @if (Context.Session.GetString("UserId") != null)
+                                {
+                                    <button style="border-style:solid; border-color: #E4002A" class="addToCartButton btn" data-productid="@item.MaHang">Thêm vào giỏ hàng</button>
+                          
+                                }
+              
 
 
 
@@ -53,4 +54,3 @@
                     Không có dữ liệu
                 </caption>
             }
-            

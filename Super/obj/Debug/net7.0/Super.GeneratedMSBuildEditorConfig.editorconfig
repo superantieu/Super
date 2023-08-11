@@ -88,6 +88,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/1.Study/C\#/01-07-Super/Super/Super/Views/GioHang/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lvSGFuZ1xDYXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/1.Study/C\#/01-07-Super/Super/Super/Views/Hang/innerIndex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ1xpbm5lckluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -156,12 +160,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfcGFydGlhbFRoZW1IYW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/1.Study/C\#/01-07-Super/Super/Super/Views/Order/OrderConfirm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcT3JkZXJDb25maXJtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/1.Study/C\#/01-07-Super/Super/Super/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/1.Study/C\#/01-07-Super/Super/Super/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/1.Study/C\#/01-07-Super/Super/Super/Views/UserOrder/GetOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlck9yZGVyXEdldE9yZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/1.Study/C\#/01-07-Super/Super/Super/Views/UserOrder/OrderDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlck9yZGVyXE9yZGVyRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/1.Study/C\#/01-07-Super/Super/Super/Views/_ViewImports.cshtml]

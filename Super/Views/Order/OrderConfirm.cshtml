@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewData["Title"] = "OrderConfirm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model Super.Models.XacNhanOrder
+
+<h1 style="
+    margin: 10px;
+    font-size: 30px;
+">Xác nhận order</h1>
+
+<h2 style="
+    margin: 10px;
+    font-size: 20px;
+">Chi tiết order</h2>
+<p style="
+    margin: 5px;
+    font-size: 15px;
+">ID: @Model.HoaDon.MaHd</p>
+<p style="
+    margin: 5px;
+    font-size: 15px;
+">Tổng thành tiền: @Model.HoaDon.TongTien VND</p>
+<p style="
+    margin: 5px;
+    font-size: 15px;
+">Ngày mua hàng: @Model.HoaDon.NgayLap</p>
+
+<h2 style="
+    margin: 10px;
+    font-size: 20px;
+">Chi tiết sản phẩm</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Sản Phẩm</th>
+            <th>Số lượng</th>
+            <th>Giá</th>
+            <th>Tổng tiền</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ChiTietHoaDons)
+        {
+            <tr>
+                <td>@item.ProductId</td>
+                <td>@item.SoLuongMua</td>
+                <td>@item.DonGiaBan</td>
+                <td>@item.ThanhTien</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

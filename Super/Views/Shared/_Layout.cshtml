@@ -66,8 +66,13 @@
                     <div class="navbar-container">
                         <ul class="navbar-container__links">
                             <li><a asp-area="Admin" asp-controller="Home" asp-action="Index" class="navbar-items navbar-items--hover navbar-items__separate">Kênh Người Bán</a></li>
-                           <li><a asp-area="Admin" asp-controller="Users" asp-action="Login" class="navbar-items navbar-items--hover navbar-items__separate">Sign In</a></li>
-                            
+                              <li class="navbar-items navbar-items--hover">
+                                <div class="navbar-items__link" href="">
+                                    <i class="navbar-icons far fa-bell"></i>
+                                    Thông báo
+                                </div>
+                               
+                            </li>
                             <li href="" class="navbar-items navbar-items--hover navbar-qr-show navbar-items__separate">
                                 Tải ứng dụng
                                 <div class="navbar-items__qr-code">
@@ -91,100 +96,25 @@
                                 <a class="navbar-items__link" href=""><i class="navbar-icons fab fa-instagram"></i></a>
                             </li>
                         </ul>
-                        <ul class="navbar-container__links">
-                            <li class="navbar-items navbar-items--hover">
-                                <div class="navbar-items__link" href="">
-                                    <i class="navbar-icons far fa-bell"></i>
-                                    Thông báo
-                                </div>
-                                <div class="navbar-notify">
-                        
-                                    <div class="navbar-notify-signed">
-                                        <div class="notify-heading">Thông Báo Mới Nhận</div>
-                                        <ul class="notify-container">
-                                            <li class="notify-item">
-                                                <div class="notify-item-container">
-                                                    <div class="notify-item__icon" style="background-image: url(~/asset/image/notify-item1.jpg);"></div>
-                                                    <div class="notify-item-infor">
-                                                        <span class="notify-item-infor__heading">Đồ dùng siêu sale chỉ từ 7K</span>
-                                                        <span class="notify-item-infor__description">💕 Săn thêm voucher đến 100K
-                                                            ️🎉 Top thương hiệu giảm đến 50%
-                                                            ️🛒 Mua 1 tặng 1 - Ngại gì không mua!</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="notify-item notify-item--highlight">
-                                                <div class="notify-item-container">
-                                                    <div class="notify-item__icon" style="background-image: url(~/asset/image/notify-item2.png);"></div>
-                                                    <div class="notify-item-infor">
-                                                        <span class="notify-item-infor__heading">Siêu thị 0Đ - Freeship đến 70K</span>
-                                                        <span class="notify-item-infor__description">🛵 Now Fresh giờ nào cũng ship
-                                                            💕 Loạt deal 0Đ cực hot
-                                                            💥 Đi chợ cùng Copyyy Mart thôi!</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="notify-item">
-                                                <div class="notify-item-container">
-                                                    <div class="notify-item__icon" style="background-image: url(~/asset/image/notify-item3.png);"></div>
-                                                    <div class="notify-item-infor">
-                                                        <span class="notify-item-infor__heading">Cuối tuần rồi, Super thôi.</span>
-                                                        <span class="notify-item-infor__description">Ở nhà không khó.
-                                                            Super tặng bạn voucher cho đơn từ 50K.
-                                                            Số lượng có hạn. Kiểm tra ví và mua ngay!!!</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="notify-item">
-                                                <div class="notify-item-container">
-                                                    <div class="notify-item__icon" style="background-image: url(~/asset/image/notify-item4.png);"></div>
-                                                    <div class="notify-item-infor">
-                                                        <span class="notify-item-infor__heading">Voucher Hoàn Xu Xtra 20% tối đa 40K Xu cho đơn từ 0Đ.</span>
-                                                        <span class="notify-item-infor__description">Voucher Hoàn Xu Xtra hoàn 20% tối đa 40K Xu đã có sẵn trong ví voucher. Hiệu lực: 26/07/2022 00:00 - 26/07/2023 23:59. Số lượng có hạn. Dùng ngay bạn nhé!</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="notify-item notify-item--highlight">
-                                                <div class="notify-item-container">
-                                                    <div class="notify-item__icon" style="background-image: url(~/asset/image/notify-item5.jpg);"></div>
-                                                    <div class="notify-item-infor">
-                                                        <span class="notify-item-infor__heading">Siêu sale Shop Mới giảm 50%</span>
-                                                        <span class="notify-item-infor__description">✨ Tiêu dùng, Điện tử, Thời trang
-                                                            😍 Nhiều deal sale sốc đến 50%
-                                                            🍂 Săn thêm voucher giảm 10%
-                                                            💥 Ở nhà không khó, an tâm mua sắm!</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <div class="notify-footing">
-                                            <a href="" class="notify-footing__btn">
-                                                Xem tất cả
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+                      <ul class="navbar-container__links">
+                             @if (Context.Session.GetString("UserId") == null)
+                          {
+                            <li><a asp-area="Admin" asp-controller="Users" asp-action="Login" class="navbar-items navbar-items--hover navbar-items__separate">Sign In</a></li>
                             <li class="navbar-items navbar-items--hover">
                                 <a class="navbar-items__link" asp-area="Admin" asp-controller="Users" asp-action="SignUp"><i class="navbar-icons far fa-question-circle"></i>Sign Up</a>
                             </li>
-                      
-                            <li class="navbar-items navbar-user">
-                             
-                                <img src="~/asset/image/user_icon_s.png" alt="" class="navbar-user__img"/>
-                                <span class="navbar-user__name">Super</span>
-                                <ul class="navbar-user__menu">
-                                    <li class="user-menu__item">
-                                        <a href="" class="user-menu__item-link">Tài khoản của tôi</a>
-                                    </li>
-                                    <li class="user-menu__item">
-                                        <a href="" class="user-menu__item-link">Đơn mua</a>
-                                    </li>
-                                    <li class="user-menu__item">
-                                        <a href="" class="user-menu__item-link">Đăng xuất</a>
-                                    </li>
-                                </ul>
-                            </li>
+                          } else
+                          {
+                           <li class="nav-item">
+                            <a class="navbar-items navbar-items--hover navbar-items__separate" aria-current="page" href="@Url.Action("Cart", "GioHang")">Giỏ Hàng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navbar-items navbar-items--hover navbar-items__separate" aria-current="page" href="@Url.Action("GetOrder", "UserOrder")">Hóa Đơn</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="navbar-items__link" asp-area="Admin" asp-controller="Users" asp-action="Logout"><i class="navbar-icons far fa-question-circle"></i>Log Out</a>
+                        </li>
+                            }
                         </ul>
                     </div>
                 </nav>

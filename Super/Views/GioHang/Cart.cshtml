@@ -1,0 +1,103 @@
+﻿@model IEnumerable<Super.Models.DanhSachGioHang>
+@{
+    ViewData["Title"] = "Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if(Model != null)
+{
+    <section class="vh-60" style="background-color: #fff; margin-top: 8rem">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col">
+                    <p><span class="h2">Giỏ Hàng Của Bạn </span><span class="h4">(@Model.Count() Sản phẩm trong giỏ hàng của bạn)</span></p>
+
+                    <div class="card mb-4" style="border-color: #edc7b7">
+
+                        @{
+                            decimal? total = 0;
+                        }
+                        @foreach(var item in Model)
+                        {
+                            <div class="card-body p-4">
+
+                        <div class="row align-items-center">
+                            <div class="col-md-2">
+                                <img style="
+    
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+" src="@item.HinhAnh"
+                                     class="img-fluid" alt="Generic placeholder image">
+                            </div>
+                            <div class="col-md-2 d-flex justify-content-center">
+                                <div>
+                                            <p class="small text-muted mb-4 pb-2">Tên sản phẩm</p>
+                                    <p class="lead fw-normal mb-0">@item.TenHang</p>
+                                </div>
+                            </div>
+                            <div class="col-md-2 d-flex justify-content-center">
+                                <div>
+                                    <p class="small text-muted mb-4 pb-2">Số lượng sản phẩm</p>
+                                    <p class="lead fw-normal mb-0">@item.SoLuong</p>
+                                </div>
+                            </div>
+                            <div class="col-md-2 d-flex justify-content-center">
+                                <div>
+                                    <p class="small text-muted mb-4 pb-2">Giá sản phẩm</p>
+                                    <p class="lead fw-normal mb-0">@item.DonGia VND</p>
+                                </div>
+                            </div>
+                            <div class="col-md-2 d-flex justify-content-center">
+                                <div >
+                                    <p class="small text-muted mb-4 pb-2">Tổng thành tiền</p>
+                                            <p class="lead fw-normal mb-0">@(item.DonGia * item.SoLuong) VND</p>
+                                </div>
+                            </div>
+
+
+                            @{
+                                total += item.DonGia * item.SoLuong;
+                            }
+                                    <div class="col-md-2 d-flex justify-content-center">
+                                        <div>
+                                            <form method="post" action="/GioHang/DeleteCart">
+                                                <input type="hidden" name="productId" value="@item.MaHang" />
+                                                <button type="submit" class="btn btn-danger btn-sm">Xóa</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                        </div>
+
+                    </div>
+                        
+                        }
+                </div>
+
+
+                <div class="card mb-5">
+                    <div class="card-body p-4">
+
+                        <div class="float-end">
+                            <p class="mb-0 me-5 d-flex align-items-center">
+                                    <span class="small text-muted me-2">Tổng thành tiền hóa đơn:</span> <span class="lead fw-normal">@total VND</span>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                    <div class="d-flex justify-content-end">
+                        <a asp-area="" asp-controller="Order" asp-action="CreateOrder" class="btn btn-light btn-lg me-2">Thanh toán</a>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+    </section>
+}
+
+
+
+

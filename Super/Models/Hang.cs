@@ -9,7 +9,6 @@ namespace Super.Models;
 [Table("Hang")]
 public partial class Hang
 {
-   
     [Key]
     public int MaHang { get; set; }
 
@@ -43,8 +42,8 @@ public partial class Hang
     [Column(TypeName = "date")]
     public DateTime? NgayNhap { get; set; }
 
-    [InverseProperty("MaHangNavigation")]
-    public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; } = new List<ChiTietHoaDon>();
+    [Column(TypeName = "decimal(10, 2)")]
+    public decimal? DonGia { get; set; }
 
     [ForeignKey("MaNhanHieu")]
     [InverseProperty("Hangs")]

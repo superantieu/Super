@@ -16,12 +16,13 @@ public partial class Balance
     [Column("KM")]
     [StringLength(50)]
     public string? Km { get; set; }
-    public bool? IsActive { get; set; }
-    [StringLength(200)]
-    public string? Filter { get; set; }
 
     [Column(TypeName = "ntext")]
     public string? Details { get; set; }
+
+    public bool? IsActive { get; set; }
+
+    public string? Filter { get; set; }
 
     [InverseProperty("UrlNavigation")]
     public virtual ICollection<Hang> Hangs { get; set; } = new List<Hang>();
